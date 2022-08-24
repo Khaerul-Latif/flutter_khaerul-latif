@@ -31,6 +31,10 @@ Implementasikan intruksi git untuk push, pull, stash dan merge
 ![imgMerge](screenshoot/Merge.png)
 ### Task 04
 Implementasikan sebuah penanganan confict di branch developement ketika setelah merge dari branch developement ketika setelah merge dari branch featureA lalu merge dari branch featureB (Conflict bisa terjadi jika kedua branch mengerjakan di file dan line code yang sama)
-
+* Conflict Merge
+![imgConflictMerge1](screenshoot/ConflictMerge1.0.png)
+![imgConflictMerge2](screenshoot/ConflictMerge2.0.png)
 ### Task 05
 Gunakan merge no fast forward
+* Merge No Forward
+![imgMergeNoForward](screenshoot/MergeNoFastForward.png)
