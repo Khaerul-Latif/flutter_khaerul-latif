@@ -1,6 +1,6 @@
 # (03) Basic Version and Branch Management (Git)
 ## Data diri 
-Nomor Urut : 1_013FLB_50
+Nomor Perserta : 1_013FLB_50
 Nama : Khaerul Latif
 
 ## Summary 
