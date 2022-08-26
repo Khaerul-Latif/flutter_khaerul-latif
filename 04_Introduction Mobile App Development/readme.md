@@ -15,7 +15,7 @@ Section 4 ini saya belajar tentang Introduction Mobile App Development, diantara
 1. pada Android studio: Java untuk Android
 2. pada Android Studio: Kotlin untuk Android
 3. pada Xcode: Swift untuk IOS
-4. pada Xcode: Objective – C unutk IOS
+4. pada Xcode: Objective – C untuk IOS
 5. pada Visual Studio Code : Dart untuk Cross Platform
 
 ### Task 02
