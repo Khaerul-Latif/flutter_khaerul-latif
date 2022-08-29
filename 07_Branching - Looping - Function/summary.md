@@ -1,6 +1,6 @@
 # (07) Branching - Looping - Function
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
+Nomor Peserta  : 1_013FLB_50
 Nama : Khaerul Latif
 
 ## Summary 
