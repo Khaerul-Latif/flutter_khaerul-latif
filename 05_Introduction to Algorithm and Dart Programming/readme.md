@@ -4,8 +4,8 @@ Nomor Peserta  : 1_013FLB_50
 Nama : Khaerul Latif
 
 ## Summary 
-Section 5 ini saya belajar tentang Introduction to Algorithm and Dart Programming, diantaranya:
-1. Mengetahui menggunakan dart di editor Visual Studio Code
+Section 7 ini saya belajar tentang Introduction to Algorithm and Dart Programming, diantaranya:
+1. Mengetahui 
 2. Mengetahui Operator yang terdapat di bahasa pemrograman Dart
 3. Mengetahui Tipe Data yang terdapat di bahasa pemrograman Dart
 
