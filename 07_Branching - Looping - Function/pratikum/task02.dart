@@ -5,7 +5,7 @@ void main() {
 }
 
 void factorialValue(n) {
-  int faktorial = 1;
+  double faktorial = 1;
   for (int i = 1; i <= n; i++) {
     faktorial *= i;
   }
