@@ -17,7 +17,7 @@ Menampilakan nilai jika:
 - nilai diatas 0 akan mendapatkan C 
 - nilai selain itu akan mendapatkan kosong(null)
 
-![imgTask01](screenshoot/task01.png)
+![imgTask01](screenshoot/Task01.png)
 
 ### Task 02
 menampilakan nilai faktorial dari:
@@ -25,4 +25,4 @@ menampilakan nilai faktorial dari:
 - 20
 - 30
 
-![imgTask02](screenshoot/task02.png)
+![imgTask02](screenshoot/Task02.png)
