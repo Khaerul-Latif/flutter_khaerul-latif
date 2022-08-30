@@ -5,7 +5,7 @@ Nama : Khaerul Latif
 
 ## Summary 
 Section 7 ini saya belajar tentang Branching - Looping - Function, diantaranya:
-1. Mengetahui cara perulangan di bahasa pemrograman Dart
+1. Mengetahui cara melakukan perulangan di bahasa pemrograman Dart
 2. Mengetahui cara menangambil keputusan di bahasa pemrograman Dart
 3. Mengetahui cara menghentikan dan melanjutkan perulangan di bahasa pemrograman Dart
 
