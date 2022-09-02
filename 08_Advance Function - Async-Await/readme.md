@@ -25,4 +25,3 @@ Section 8 ini saya belajar tentang Advance Function - Async-Await, diantaranya:
 - tiap element wajib terdapat 2 data (sub-element). 
 
 ![imgTask02](screenshoot/task02.png)
-
