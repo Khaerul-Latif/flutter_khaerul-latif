@@ -1,4 +1,4 @@
-Future<Map> soal(List listNusantara) {
+Future<Map> listCap(List listNusantara) {
   int i = 0;
   var capital = new Map();
 
@@ -25,10 +25,7 @@ void main() async {
     ["Daerah Khusus Ibukota Jakarta", "Jakarta"]
   ];
 
-  var newList = await soal(listNusantara);
-
-  print('Banyaknya List Nusantara = ${listNusantara.length}');
+  var newList = await listCap(listNusantara);
   print('Isi dari List Nusantara = $listNusantara');
-  print('Banyaknya List Baru Nusantara = ${newList.length}');
-  print('Isi dari List baru Nusantara yang sudah di sub-element = $newList');
+  print('Isi dari List baru Nusantara yang sudah di Map = $newList');
 }

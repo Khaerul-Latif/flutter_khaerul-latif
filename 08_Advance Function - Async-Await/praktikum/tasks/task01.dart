@@ -1,4 +1,4 @@
-Future<List> listCap(List listData, int kali) {
+Future<List> fungsiList(List listData, int kali) {
   var data = [];
   int i = 0;
   int perkalian;
@@ -15,9 +15,8 @@ Future<List> listCap(List listData, int kali) {
 void main() async {
   int kali = 5;
   var list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  var newList = await listCap(list, kali);
+  var newList = await fungsiList(list, kali);
 
-  print('Banyaknya list = ${list.length}');
   print('isi dari list = $list');
   print('isi dari list yang sudah dikalikan = $newList');
 }

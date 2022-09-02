@@ -24,5 +24,5 @@ Section 8 ini saya belajar tentang Advance Function - Async-Await, diantaranya:
 - tiap element-nya berupa list juga, 
 - tiap element wajib terdapat 2 data (sub-element). 
 
-![imgTask02](/08_Advance%20Function%20-%20Async-Await/screenshoot/task02.png)
+![imgTask01](/08_Advance%20Function%20-%20Async-Await/screenshoot/task01.png)
 
