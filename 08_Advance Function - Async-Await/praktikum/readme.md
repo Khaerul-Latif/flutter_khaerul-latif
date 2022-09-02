@@ -11,6 +11,18 @@ Section 8 ini saya belajar tentang Advance Function - Async-Await, diantaranya:
 
 ## Task
 ### Task 01
+1. Membuat sebuah fungsi dengan spesifikasi berikut:
+- menerima 2 parameter, yaitu list data dan pengali, 
+- lakukan perulangan pada list data secara asynchronous, 
+- tiap perulangan, kalikan elemen list data dengan pengali, 
+- return list baru yang berisi hasil proses di atas.
 
+![imgTask01](/08_Advance%20Function%20-%20Async-Await/screenshoot/task01.png)
 
 ### Task 02
+2. Membuat sebuah list dengan spesifikasi berikut & Membuat sebuah Map dengan menggunakan list tersebut!:
+- tiap element-nya berupa list juga, 
+- tiap element wajib terdapat 2 data (sub-element). 
+
+![imgTask02](/08_Advance%20Function%20-%20Async-Await/screenshoot/task02.png)
+
