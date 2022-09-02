@@ -11,18 +11,6 @@ Section 8 ini saya belajar tentang Advance Function - Async-Await, diantaranya:
 
 ## Task
 ### Task 01
-Menampilakan nilai jika:
-- nilai diatas 70 akan mendapatkan A
-- nilai diatas 40 akan mendapatkan B
-- nilai diatas 0 akan mendapatkan C 
-- nilai selain itu akan mendapatkan kosong(null)
 
-![imgTask01](screenshoot/Task01.png)
 
 ### Task 02
-menampilakan nilai faktorial dari:
-- 10
-- 20
-- 30
-
-![imgTask02](screenshoot/Task02.png)
