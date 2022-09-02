@@ -23,4 +23,4 @@ menggunakan 2 fungsi dalam satu file, antara lain :
 - 20
 - 30
 
-![imgTask01&Task02](../Task01-Task02.png)
+![imgTask01&Task02](/07_Branching%20-%20Looping%20-%20Function/screenshoot/Task01-Task02.png)
