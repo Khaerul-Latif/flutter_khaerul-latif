@@ -1,28 +1,15 @@
-# (09) Collection
+# (11) Dart Object Oriented Programming 2
 ## Data diri 
 Nomor Peserta  : 1_013FLB_50  <br />
 Nama : Khaerul Latif
 
 ## Summary 
-Section 9 ini saya belajar tentang Collection, diantaranya:
-1. List digunakan untuk menyimpan banyak data. Data pada List disusun secara berurutan dan diakses menggunakan index.
-2. Set digunakan untuk menyimpan banyak data secara unik, tidak ada duplikasi, tidak berurutan, dan tidak diindeks.
-3. Map menyimpan banyak data dengan format pasangan key-value
-
+Section 11 ini saya belajar tentang Dart Object Oriented Programming 2, diantaranya:
+1. Abstraction, objek hanya menunjukkan operasinya secara high-level. Cukup tau method apa saja yang dibuat oleh class tersebut.
+2. Inheritance, mewarisi properti kelas induk (parent class) ke kelas anak (child class). 
+3. Polymorphism, objek class dapat memiliki bentuk atau implementasi yang berbeda-beda pada satu metode yang sama.
 ## Task
-### Task 01
-1. Membuat sebuah fungsi dengan spesifikasi berikut:
-- menerima 2 parameter, yaitu list data dan pengali, 
-- lakukan perulangan pada list data secara asynchronous, 
-- tiap perulangan, kalikan elemen list data dengan pengali, 
-- return list baru yang berisi hasil proses di atas.
+### Task 01, Task 02, Task 03 & Task 04
+Membuat beberapa class balok, kubus dan bangun_ruang(abstract), melakukan 
 
-![imgTask01](screenshoot/task01.png)
-
-### Task 02
-2. Membuat sebuah list dengan spesifikasi berikut & Membuat sebuah Map dengan menggunakan list tersebut!:
-- tiap element-nya berupa list juga, 
-- tiap element wajib terdapat 2 data (sub-element). 
-
-![imgTask02](screenshoot/task02.png)
-
+![imgSoalTask01](/11_Dart%20Object%20Oriented%20Programming%202/screenshoot/task01_task02_task03_task04.png)

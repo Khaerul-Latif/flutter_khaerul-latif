@@ -1,16 +1,16 @@
-import 'main.dart';
+import 'bangun_ruang.dart';
 
-class Kubus extends BangunRuang {
+class Kubus extends bangunRuang {
   int sisi;
 
   Kubus(this.sisi);
 
   double volume() {
-      return (sisi*sisi).toDouble();
+    return (sisi * sisi).toDouble();
   }
 }
 
-void main (){
-  BangunRuang kubus = Kubus(10);
-  print(kubus.volume());
+void main() {
+  bangunRuang kubus = Kubus(10);
+  print('Volume kubus dengan sisi 10 m adalah ${kubus.volume()} m');
 }
