@@ -24,7 +24,7 @@ Section 9 ini saya belajar tentang Collection, diantaranya:
 - tiap perulangan, kalikan elemen list data dengan pengali,
 - return list baru yang berisi hasil proses di atas.
 
-![imgTask01](/screenshoot/task01.png)
+![imgTask01](/09_Collection/praktikum/screenshoot/task01.png)
 
 ### Task 02
 
@@ -33,7 +33,7 @@ Section 9 ini saya belajar tentang Collection, diantaranya:
 - tiap element-nya berupa list juga,
 - tiap element wajib terdapat 2 data (sub-element).
 
-![imgTask02](/screenshoot/task02.png)
+![imgTask02](/09_Collection/praktikum/screenshoot/task02.png)
 
 ## 3 Latihan dari mentor
 
