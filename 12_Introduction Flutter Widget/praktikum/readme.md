@@ -45,3 +45,6 @@ Memisahkan menjadi beberapa widget tanpa mengubah tampilannya.
     );
   }
 ```
+
+Berikut adalah code dan hasil runnya
+![imgTask01&Task02](12_Introduction%20Flutter%20Widget/screenshoot/Task01&Task02.png)
