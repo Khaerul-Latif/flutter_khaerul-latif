@@ -34,7 +34,7 @@ class _MyAppState extends State {
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
-          title: const Text('Flutter Widget'),
+          title: const Text('Flutter Widget')
         ),
         body: Center(
           child: Text(

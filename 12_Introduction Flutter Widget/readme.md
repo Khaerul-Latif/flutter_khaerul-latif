@@ -1,1 +1,47 @@
-## Data diri
+# (12) Introduction Flutter Widget
+## Data diri 
+Nomor Peserta  : 1_013FLB_50  <br />
+Nama : Khaerul Latif
+
+## Summary 
+Section 12 ini saya belajar tentang Introduction Flutter Widget, diantaranya:
+1. Flutter adalah framework yang di buat oleh google untuk mengembangkan antarmuka pengguna dalam membuat aplikasi mobile,desktop dan web
+2. Widget adalah komponen untuk membentuk antarmuka / UI aplikasi, bisa di katakan sebagai blueprint 
+3. Built in widget adalah widget yang dapat langsung digunakan / widget bawaan dari flutter itu sendiri
+
+## Task
+### Task 01
+Membuat statefull widget yang kontennya dapat berubah tiap detik.
+```dart
+void startJam() {
+    Timer.periodic(new Duration(seconds: 1), (_) {
+      var tgl = new DateTime.now();
+      var formatedjam = new DateFormat.Hms().format(tgl);
+      setState(() {
+        jam = formatedjam;
+      });
+    });
+  }
+```
+
+### Task 02
+Memisahkan menjadi beberapa widget tanpa mengubah tampilannya. 
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('Flutter Widget'),
+        ),
+        body: Center(
+          child: Text(
+            jam,
+            style: TextStyle(fontSize: 40),
+          ),
+        ),
+      ),
+    );
+  }
+```

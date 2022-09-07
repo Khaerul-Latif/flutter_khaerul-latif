@@ -1,28 +1,47 @@
-# (09) Collection
+# (12) Introduction Flutter Widget
 ## Data diri 
 Nomor Peserta  : 1_013FLB_50  <br />
 Nama : Khaerul Latif
 
 ## Summary 
-Section 9 ini saya belajar tentang Collection, diantaranya:
-1. List digunakan untuk menyimpan banyak data. Data pada List disusun secara berurutan dan diakses menggunakan index.
-2. Set digunakan untuk menyimpan banyak data secara unik, tidak ada duplikasi, tidak berurutan, dan tidak diindeks.
-3. Map menyimpan banyak data dengan format pasangan key-value
+Section 12 ini saya belajar tentang Introduction Flutter Widget, diantaranya:
+1. Flutter adalah framework yang di buat oleh google untuk mengembangkan antarmuka pengguna dalam membuat aplikasi mobile,desktop dan web
+2. Widget adalah komponen untuk membentuk antarmuka / UI aplikasi, bisa di katakan sebagai blueprint 
+3. Built in widget adalah widget yang dapat langsung digunakan / widget bawaan dari flutter itu sendiri
 
 ## Task
 ### Task 01
-1. Membuat sebuah fungsi dengan spesifikasi berikut:
-- menerima 2 parameter, yaitu list data dan pengali, 
-- lakukan perulangan pada list data secara asynchronous, 
-- tiap perulangan, kalikan elemen list data dengan pengali, 
-- return list baru yang berisi hasil proses di atas.
-
-![imgTask01](screenshoot/task01.png)
+Membuat statefull widget yang kontennya dapat berubah tiap detik.
+```dart
+void startJam() {
+    Timer.periodic(new Duration(seconds: 1), (_) {
+      var tgl = new DateTime.now();
+      var formatedjam = new DateFormat.Hms().format(tgl);
+      setState(() {
+        jam = formatedjam;
+      });
+    });
+  }
+```
 
 ### Task 02
-2. Membuat sebuah list dengan spesifikasi berikut & Membuat sebuah Map dengan menggunakan list tersebut!:
-- tiap element-nya berupa list juga, 
-- tiap element wajib terdapat 2 data (sub-element). 
+Memisahkan menjadi beberapa widget tanpa mengubah tampilannya. 
 
-![imgTask02](screenshoot/task02.png)
-
+```dart
+@override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('Flutter Widget'),
+        ),
+        body: Center(
+          child: Text(
+            jam,
+            style: TextStyle(fontSize: 40),
+          ),
+        ),
+      ),
+    );
+  }
+```
