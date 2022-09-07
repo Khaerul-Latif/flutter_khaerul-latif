@@ -10,6 +10,5 @@ Section 11 ini saya belajar tentang Dart Object Oriented Programming 2, diantara
 3. Polymorphism, objek class dapat memiliki bentuk atau implementasi yang berbeda-beda pada satu metode yang sama.
 ## Task
 ### Task 01, Task 02, Task 03 & Task 04
-Membuat beberapa class balok, kubus dan bangun_ruang(abstract), melakukan 
-
+Membuat beberapa class balok, kubus dan bangun_ruang(abstract), untuk menghitung volume kubus dan balok
 ![imgSoalTask01](/11_Dart%20Object%20Oriented%20Programming%202/screenshoot/task01_task02_task03_task04.png)
