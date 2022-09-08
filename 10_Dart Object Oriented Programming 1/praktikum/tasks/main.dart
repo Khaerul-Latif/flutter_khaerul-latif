@@ -1,5 +1,5 @@
-import 'task01_hewan.dart';
-import 'task01_kendaraan.dart';
+import 'hewan.dart';
+import 'mobil.dart';
 
 void main() {
   Hewan kambing = new Hewan();
@@ -9,7 +9,7 @@ void main() {
   sapi.beratHewan = 100;
 
   Hewan ayam = new Hewan();
-  ayam.beratHewan = -1;
+  ayam.beratHewan = 2;
 
   Hewan domba = new Hewan();
   domba.beratHewan = 12;

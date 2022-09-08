@@ -1,4 +1,4 @@
-import 'task01_hewan.dart';
+import 'hewan.dart';
 
 class Mobil {
   int? kapasitas;
@@ -9,6 +9,6 @@ class Mobil {
   }
 
   void totalMuatan() {
-    print(muatan.length);
+    print('Total Muatan = ${muatan.length} jenis hewan');
   }
 }
