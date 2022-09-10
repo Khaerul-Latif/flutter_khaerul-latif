@@ -71,7 +71,7 @@ print(kubus.volume());
 diatas proses membuat object variabel kubus dengan tipe data bangunRuang dan memberi nilai / parameter yang ada pada kelas kubus
 
 Berikut adalah codingan dan runnya task 01 dan task 02
-![img Task01 dan Task02](screenshoot/task01_task02.png)
+![img Task01 dan Task02](/11_Dart%20Object%20Oriented%20Programming%202/screenshoot/task01_task02.png)
 
 ### Task 03
 **Membuat class bangun ruang, kubus dan balok. dimana class bangun ruang menurunkan class kubus dan class balok**
@@ -150,7 +150,7 @@ print(operation.hasil());
 diatas proses membuat object variabel operation dengan tipe data class Matematika dan memberi nilai / parameter yang ada pada kelas lowestCommonMultiple
 
 Berikut adalah codingan dan runnya task 03 dan task 04
-![img Task03 dan Task04](screenshoot/task03_task04.png)
+![img Task03 dan Task04](/11_Dart%20Object%20Oriented%20Programming%202/screenshoot/task03_task04.png)
 ### Task 05
 ```dart
 class Hewan {
@@ -223,4 +223,4 @@ burung.suara();
 diatas proses Membuat Object burung dari kelas burung yang berisi 3 parameter pertipe data String, serta memmanggil methode suara
 
 Berikut adalah codingan dan runnya task 03 dan task 04
-![img Task05 atau Latihan](screenshoot/task05_Latihan.png)
+![img Task05 atau Latihan](/11_Dart%20Object%20Oriented%20Programming%202/screenshoot/task05_Latihan.png)

@@ -5,6 +5,7 @@ class Kubus extends bangunRuang {
 
   Kubus(this.sisi);
 
+  @override
   double volume() {
     return (sisi * sisi).toDouble();
   }
@@ -12,5 +13,5 @@ class Kubus extends bangunRuang {
 
 void main() {
   bangunRuang kubus = Kubus(10);
-  print('Volume kubus dengan sisi 10 m adalah ${kubus.volume()} m');
+  print(kubus.volume());
 }
