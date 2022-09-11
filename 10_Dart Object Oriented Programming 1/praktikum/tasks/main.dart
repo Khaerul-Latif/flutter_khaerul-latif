@@ -15,13 +15,16 @@ void main() {
   domba.beratHewan = 12;
 
   Mobil mobilPengangkut = new Mobil();
-  mobilPengangkut.kapasitas = 4;
+  mobilPengangkut.kapasitas = 5;
 
   if (mobilPengangkut.kapasitas! > 1) {
     mobilPengangkut.tambahMuatan(kambing);
     mobilPengangkut.tambahMuatan(sapi);
     mobilPengangkut.tambahMuatan(ayam);
     mobilPengangkut.tambahMuatan(domba);
+        mobilPengangkut.tambahMuatan(domba);
+  } else {
+    print('Muatan di tolak');
   }
   mobilPengangkut.totalMuatan();
 }
