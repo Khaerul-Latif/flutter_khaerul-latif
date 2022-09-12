@@ -52,7 +52,6 @@ class _TelegramPageState extends State<TelegramPage> {
         backgroundColor: Color(0xFF65A9E0),
         onPressed: () {},
       ),
-
     );
   }
 }

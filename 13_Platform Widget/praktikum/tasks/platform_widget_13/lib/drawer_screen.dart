@@ -35,8 +35,13 @@ class _DrawerScreenState extends State<DrawerScreen> {
             onTilePressed: () {},
           ),
           DrawerListTile(
-            iconData: Icons.campaign,
-            title: "New Channel",
+            iconData: Icons.attribution,
+            title: "People Nearby",
+            onTilePressed: () {},
+          ),
+           DrawerListTile(
+            iconData: Icons.bookmark_border,
+            title: "Save Messages",
             onTilePressed: () {},
           ),
           DrawerListTile(
@@ -44,15 +49,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
             title: "Settings",
             onTilePressed: () {},
           ),
-          Divider(),
+          const Divider(),
           DrawerListTile(
             iconData: Icons.person_add,
             title: "Invite Friends",
             onTilePressed: () {},
           ),
           DrawerListTile(
-            iconData: Icons.help,
-            title: "Telegram FAQ",
+            iconData: Icons.help_outline,
+            title: "Telegram Features",
             onTilePressed: () {},
           ),
         ],
