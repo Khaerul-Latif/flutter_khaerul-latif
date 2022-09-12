@@ -12,12 +12,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
-              accountName: Text("Alex Suprun"),
+              accountName: Text("Marcus Santos"),
 
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/alex-suprun.jpg"),
+                backgroundImage: AssetImage("assets/images/marcus-santos.jpg"),
               ),
-              accountEmail: Text("+628123456789"),
+              accountEmail: Text("087391273913"),
           ),
           DrawerListTile(
             iconData: Icons.group,
@@ -25,8 +25,13 @@ class _DrawerScreenState extends State<DrawerScreen> {
             onTilePressed: () {},
           ),
           DrawerListTile(
-            iconData: Icons.lock,
-            title: "New Secret Group",
+            iconData: Icons.contacts,
+            title: "Contacts",
+            onTilePressed: () {},
+          ),
+          DrawerListTile(
+            iconData: Icons.call,
+            title: "Calls",
             onTilePressed: () {},
           ),
           DrawerListTile(
@@ -34,20 +39,15 @@ class _DrawerScreenState extends State<DrawerScreen> {
             title: "New Channel",
             onTilePressed: () {},
           ),
-          Divider(),
-          DrawerListTile(
-            iconData: Icons.contacts,
-            title: "Contacts",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.person_add,
-            title: "Invite Friends",
-            onTilePressed: () {},
-          ),
           DrawerListTile(
             iconData: Icons.settings,
             title: "Settings",
+            onTilePressed: () {},
+          ),
+          Divider(),
+          DrawerListTile(
+            iconData: Icons.person_add,
+            title: "Invite Friends",
             onTilePressed: () {},
           ),
           DrawerListTile(

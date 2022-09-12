@@ -11,63 +11,63 @@ class Message {
 
 var messageData = [
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
   Message(
-      name: 'Julian Wan',
-      messageText: 'Hello World, My name is Julian Wan..',
-      time: '12.00',
-      imgProfile: 'assets/images/julian-wan.jpg'
+      name: 'Ivan Akimenko',
+      messageText: 'Hello World, My name is Ivan Akimenko..',
+      time: '14.30',
+      imgProfile: 'assets/images/ivan-akimenko.jpg'
   ),
 ];
