@@ -1,6 +1,6 @@
 # (11) Dart Object Oriented Programming 2
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
+Nomor Peserta : 1_013FLB_50  <br />
 Nama Peserta : Khaerul Latif
 
 ## Summary 
