@@ -1,7 +1,7 @@
 # (12) Introduction Flutter Widget
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 12 ini saya belajar tentang Introduction Flutter Widget, diantaranya:

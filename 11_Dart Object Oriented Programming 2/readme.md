@@ -1,7 +1,7 @@
 # (11) Dart Object Oriented Programming 2
 ## Data diri 
 Nomor Peserta  : 1_013FLB_50  <br />
-Nama : Khaerul Latif
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 11 ini saya belajar tentang Dart Object Oriented Programming 2, diantaranya:
@@ -13,94 +13,91 @@ Section 11 ini saya belajar tentang Dart Object Oriented Programming 2, diantara
 **Membuat class bangunRuang, kubus dan balok. dimana class bangun ruang menurunkan class kubus dan class balok**
 ```dart
 abstract class bangunRuang {
-  double volume();
+  int panjang, lebar, tinggi;
+  bangunRuang(this.panjang, this.lebar, this.tinggi);
+  volume();
 }
 ```
-diatas proses membuat metode volume dengan tipe data double di kelas bangunRuang dan di file 'bangun_ruang.dart'
-
-```dart
-import 'bangun_ruang.dart';
-
-```
-diatas proses mengimport ke file 'balok.dart' dan 'kubus.dart'
+diatas proses membuat metode volume, membuat constructor panjang, lebar, tinggi bertipe data integer
 
 ```dart
 int sisi;
-Kubus(this.sisi);
+Kubus(this.sisi) : super(0, 0, 0);
 ```
-diatas proses membuat variable constuctor dengan nama variabel sisi dan tipe datanya integer di class Kubus
+diatas proses membuat variable constructor dengan nama variabel sisi dan tipe datanya integer di class Kubus. constructor super class(bangunRuang) bernilai 0;
 
 ```dart
 int sisi;
-Balok(this.panjang, this.lebar, this.tinggi);
+Balok(super.panjang, super.lebar, super.tinggi);
 ```
-diatas proses membuat variable constuctor dengan nama variabel panjang, lebar, dan tinggi dan tipe datanya integer di class Balok
+diatas proses menjadikan variable super constuctor dengan nama variabel panjang, lebar, dan tinggi dan tipe datanya integer di class bangunRuang
 
 ```dart
 class Balok extends bangunRuang {
-    @override
-    double volume() {
-        return (panjang * lebar * tinggi).toDouble();
+  @override
+  volume() {
+    print('Hasil Volume Baloknya adalah ${panjang * lebar * tinggi}');
   }
 }
 ```
-diatas proses menurunkan metode volume yang terdapat pada class bangunRuang ke dalam class balok, kemudian hasil dari metode volume di ubah ke tipe data double
+diatas proses menurunkan metode volume yang terdapat pada class bangunRuang ke dalam class balok, metode volume berisi proses
 
 ```dart
 class Kubus extends bangunRuang {
-    @override
-    double volume() {
-        return (sisi * sisi).toDouble();
-    }
+  @override
+  volume() {
+    print('Hasil Volume Kubusnya adalah ${sisi * sisi * sisi}');
+  }
 }
 ```
-diatas proses menurunkan metode volume yang terdapat pada class bangunRuang ke dalam class kubus, kemudian hasil dari metode volume di ubah ke tipe data double
+diatas proses menurunkan metode volume yang terdapat pada class bangunRuang ke dalam class kubus, metode volume berisi proses
 
 ### Task 02
 **Membuat obejct yang berisi parameter pada kelas balok dan kubus**
 ```dart
-bangunRuang balok = Balok(15, 5, 5);
-print(balok.volume());
+List<bangunRuang> data = [];
 ```
-diatas proses membuat object variabel balok dengan tipe data bangunRuang dan memberi nilai / parameter yang ada pada kelas Balok
+diatas proses membuat variabel list kosong yang menamai data
 
 ```dart
-bangunRuang kubus = Kubus(10);
-print(kubus.volume());
+data.add(Balok(2, 4, 5));
+data.add(Kubus(6));
 ```
-diatas proses membuat object variabel kubus dengan tipe data bangunRuang dan memberi nilai / parameter yang ada pada kelas kubus
+diatas proses menambahkan list ke dalam variable data, yang berisi nama kelas turunan dengan beberapa parameter
+
+```dart
+for (var bangun in data) {
+    print(bangun.volume());
+  }
+```
+diatas proses menggunakan proses perulangan pada variable bangun yang berisi metode volume
 
 Berikut adalah codingan dan runnya task 01 dan task 02
 ![img Task01 dan Task02](screenshoot/task01_task02.png)
 
 ### Task 03
-**Membuat class bangun ruang, kubus dan balok. dimana class bangun ruang menurunkan class kubus dan class balok**
+**Membuat class Matematika, lowestCommonMultiple dan balok. dimana class bangun ruang menurunkan class kubus dan class balok**
+```dart
 abstract class Matematika {
   hasil();
 }
 ```
-diatas proses membuat metode hasil di kelas Matematika dan di file 'matematika.dart'
-
-```dart
-import 'matematika.dart';
-```
-diatas proses mengimport ke file 'balok.dart' dan 'kubus.dart'
+diatas proses membuat metode volume, membuat constructor panjang, lebar, tinggi bertipe data integer
 
 ```dart
 int x, y;
 highestCommonFactor(this.x, this.y);
 ```
-diatas proses membuat variable constuctor dengan nama variabel x dan y,serta tipe datanya integer di class highestCommonFactor
+diatas proses membuat variable constructor dengan nama variabel x, y dan tipe datanya integer di class highestCommonFactor.
 
 ```dart
 int x, y;
 lowestCommonMultiple(this.x, this.y);
 ```
-diatas proses membuat variable constuctor dengan nama variabel x dan y,serta tipe datanya integer di class lowestCommonMultiple
+diatas proses membuat variable constructor dengan nama variabel x, y dan tipe datanya integer di class lowestCommonMultiple.
 
 ```dart
-class highestCommonFactor implements Matematika {
-
+class highestCommonFactor extends Matematika {
   @override
   hasil() {
     var hasil;
@@ -109,15 +106,15 @@ class highestCommonFactor implements Matematika {
         hasil = z;
       }
     }
-    print('Kelipatan Persekutuan Terbesar dari bilangan $x dan bilangan $y adalah $hasil');
+    print(
+        'Kelipatan Persekutuan Terbesar dari bilangan $x dan bilangan $y adalah $hasil');
   }
 }
 ```
-diatas proses menurunkan metode hasil yang terdapat pada class Matematika ke dalam class highestCommonFactor, kemudian methode hasil berisi rumus untuk menghitung Kelipatan Persekutuan Terbesar
+diatas proses menurunkan metode hasil yang terdapat pada class Matematika ke dalam class highestCommonFactor, metode hasil berisi proses
 
 ```dart
-class lowestCommonMultiple implements Matematika {
-
+class lowestCommonMultiple extends Matematika {
   @override
   hasil() {
     var hasil;
@@ -129,50 +126,56 @@ class lowestCommonMultiple implements Matematika {
     for (hasil = y; hasil % x != 0 || hasil % y != 0; hasil++) {
       return hasil;
     }
-    print('Kelipatan Persekutuan Terkecil dari bilangan $x dan bilangan $y adalah $hasil');
+    print(
+        'Kelipatan Persekutuan Terkecil dari bilangan $x dan bilangan $y adalah $hasil');
   }
 }
 ```
-diatas menurunkan metode hasil yang terdapat pada class Matematika ke dalam class lowestCommonMultiple, kemudian methode hasil berisi rumus untuk menghitung Kelipatan Persekutuan Terkecil
+diatas proses menurunkan metode hasil yang terdapat pada class Matematika ke dalam classlowestCommonMultiple, metode hasil berisi proses
 
 ### Task 04
-**Membuat obejct yang berisi parameter pada kelas highestCommonFactor dan lowestCommonMultiple**
+**Membuat obejct yang berisi parameter pada kelas balok dan kubus**
 ```dart
-Matematika operation = highestCommonFactor(5, 20);
-print(operation.hasil());
+List<Matematika> data = [];
 ```
-diatas proses membuat object variabel operation dengan tipe data class Matematika dan memberi nilai / parameter yang ada pada kelas highestCommonFactor
+diatas proses membuat variabel list kosong yang menamai data
 
 ```dart
-Matematika operation = lowestCommonMultiple(5, 20);
-print(operation.hasil());
+data.add(lowestCommonMultiple(5, 20));
+data.add(highestCommonFactor(5, 20));
 ```
-diatas proses membuat object variabel operation dengan tipe data class Matematika dan memberi nilai / parameter yang ada pada kelas lowestCommonMultiple
+diatas proses menambahkan list ke dalam variable data, yang berisi nama kelas turunan dengan beberap parameter
+
+```dart
+for (var operation in data) {
+    print(operation.hasil());
+  }
+```
+diatas proses menggunakan proses perulangan pada variable operation yang berisi metode hasil
 
 Berikut adalah codingan dan runnya task 03 dan task 04
 ![img Task03 dan Task04](screenshoot/task03_task04.png)
+
 ### Task 05
+**Struktur class sebagai berikut**
+
+![img soal Task05](screenshoot/soaltask05.png)
 ```dart
 class Hewan {
   String nama, jenis;
   Hewan(this.nama, this.jenis);
 
-  void suara() {}
+  void suara() { }
 }
-```
-Membuat kelas Hewan sebagai kelas Parents, serta berisi constructor nama dan jenis. dan membuat metode suara
 
-```dart
 class Unggas extends Hewan {
   String keluarga;
-  Unggas(String nama, String jenis, this.keluarga) : super(nama, jenis) {
+  Unggas(super.nama, super.jenis, this.keluarga) {
     print(
         '$nama termasuk unggas berjenis $jenis dan termasuk dalam keluarga $keluarga');
   }
 }
-```
-diatas proses Membuat kelas Unggas sebagai turunan dari kelas Hewan(kelas Parents), serta berisi constructor turunan dari kelas Hewan dan menambahkan constructor keluarga yang bertipe data String
-```dart
+
 class Kucing extends Hewan {
   Kucing(super.nama, super.jenis);
 
@@ -183,44 +186,92 @@ class Kucing extends Hewan {
 
   @override
   void suara() {
-    print('$nama bersuara meow. $nama kucing berjenis $jenis');
+    print(
+        '$nama bersuara meow ketika sedang lapar. $nama kucing berjenis $jenis');
   }
 }
-```
-diatas proses Membuat kelas Kucing sebagai turunan dari kelas Hewan(kelas Parents), serta berisi constructor dan method turunan dari kelas Hewan dan menambahkan methode lari
-```dart
+
 class Burung extends Unggas {
   Burung(super.nama, super.jenis, super.keluarga);
-
   @override
   void suara() {
+    print('Nama burung itu adalah $nama, ia burung berjenis $jenis dan termasuk dalam keluarga $keluarga, iya berbunyi Krak krak');
+  }
+  void terbang() {
     print(
-        '$nama sering berkicau. $nama termasuk burung berjenis $jenis dan termasuk dalam keluarga $keluarga');
+        '$nama sering terbang mengitari komplek. $nama termasuk burung berjenis $jenis dan termasuk dalam keluarga $keluarga');
   }
 }
 ```
-diatas proses Membuat kelas Burung sebagai turunan dari kelas Unggas(kelas Child), serta berisi constructor dan method turunan dari kelas Unggas dan menambahkan.
+Berikut adalah codingan dan runnya task 05
+![img Task05](screenshoot/task05.png)
+
+### Task 06
+**Struktur class sebagai berikut dan membuat constructor sebagai berikut**
+
+![img soal Task06](screenshoot/soaltask06.png)
 
 ```dart
-print('============ Objek Kucing============');
-var kucing = Kucing('Rio', 'Persia');
-kucing.suara();
-kucing.lari();
-```
-diatas proses Membuat Object kucing dari kelas kucing yang berisi 2 parameter pertipe data String, serta memanggil methode suara dan lari.
+abstract class Manusia {
+  String nik, nama, alamat;
+  Manusia(this.nik, this.nama, this.alamat);
 
-```dart
-print('============Objek Unggas============');
-var unggas = Unggas('Sri', 'Angsa', 'anatidae');
-```
-diatas proses Membuat Object unggas dari kelas unggas yang berisi 3 parameter pertipe data String
+  belajar();
+}
 
-```dart
-print('============Objek Burung============');
-var burung = Burung('Chelsea', 'Cendrawasih', 'Paradisaeidae');
-burung.suara();
-```
-diatas proses Membuat Object burung dari kelas burung yang berisi 3 parameter pertipe data String, serta memmanggil methode suara
+class Mahasiswa extends Manusia {
+  Mahasiswa(super.nik, super.nama, super.alamat);
 
-Berikut adalah codingan dan runnya task 03 dan task 04
-![img Task05 atau Latihan](screenshoot/task05_Latihan.png)
+  @override
+  belajar() {
+    print('Mahasiswa $nama dengan $nik beralamat di $alamat, sedang belajar');
+  }
+
+  void nikMhs() {
+    print('12879173712893712');
+  }
+
+  void prodiMhs() {
+    print('Teknik Informatika');
+  }
+
+  void ipkMhs() {
+    print('3.1');
+  }
+
+  void jadwal() {
+    print('senin - minggu');
+  }
+
+  void jadwalMhs() {
+    print('Pemrograman Dasar');
+  }
+}
+
+class Dosen extends Manusia {
+  Dosen(super.nik, super.nama, super.alamat);
+
+  @override
+  belajar() {
+    print('Dosen $nama dengan $nik beralamat di $alamat, sedang belajar');
+  }
+
+  void nidn() {
+    print('12879173712893712');
+  }
+
+  void jabatanFung() {
+    print('Asisten rektor');
+  }
+
+  void pangkat() {
+    print('Epic');
+  }
+
+  void jadwalDsn() {
+    print('Senin - Jumat');
+  }
+}
+```
+Berikut adalah codingan dan runnya task 06
+![img Task06](screenshoot/task06.png)

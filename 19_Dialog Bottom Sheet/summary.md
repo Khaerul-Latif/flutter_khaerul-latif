@@ -1,7 +1,7 @@
 # (09) Collection
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 9 ini saya belajar tentang Collection, diantaranya:
