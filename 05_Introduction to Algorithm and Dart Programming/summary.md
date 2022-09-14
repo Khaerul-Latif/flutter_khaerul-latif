@@ -1,7 +1,7 @@
 # (05) Introduction to Algorithm and Dart Programming
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 5 ini saya belajar tentang Introduction to Algorithm and Dart Programming, diantaranya:
