@@ -13,36 +13,48 @@ Section 12 ini saya belajar tentang Introduction Flutter Widget, diantaranya:
 ### Task 01
 **Membuat statefull widget yang kontennya dapat berubah tiap detik**
 ```dart
-class _MyAppState extends State { 
-  var jam = '';
-  void startJam() {
-    Timer.periodic(new Duration(seconds: 1), (_) {
-      var tgl = new DateTime.now();
-      var formatedjam = new DateFormat.Hms().format(tgl);
-      setState(() {
-        jam = formatedjam;
-      });
-    });
-  }
-}  
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => new _MyAppState();
+} 
 ```
 
 ### Task 02
 **Memisahkan menjadi beberapa widget tanpa mengubah tampilannya**
+```dart 
+Widget build(BuildContext context) {
+    return new MaterialApp(
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: const Text('Flutter Widget')
+        ),
+        body: Task02(jam: jam),
+      ),
+    );
+  }
+```
+
 ```dart
-return new MaterialApp(
-  home: new Scaffold(
-     appBar: new AppBar(
-      title: const Text('Flutter Widget'),
-    ),
-    body: Center(
+import 'package:flutter/material.dart';
+
+class Task02 extends StatelessWidget {
+  const Task02({
+    super.key,
+    required this.jam,
+  });
+
+  final String jam;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
       child: Text(
         jam,
         style: TextStyle(fontSize: 40),
       ),
-    ),
-  ),
-);
+    );
+  }
+}
 ```
 Berikut adalah code dan hasil runnya
 ![imgTask01&Task02](12_Introduction%20Flutter%20Widget/screenshoot/Task01&Task02.png)
