@@ -29,4 +29,3 @@ class MyApp extends StatelessWidget {
 
 Berikut ini adalah codingan & outputnya
 ![imgTask01 & imgTask02](screenshoot/task01_task02.png)
-
