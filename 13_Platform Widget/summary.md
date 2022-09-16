@@ -1,28 +1,32 @@
-# (09) Collection
+# (13) Platform Widget
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
+Nomor Peserta : 1_013FLB_50  <br />
 Nama Peserta : Khaerul Latif
 
 ## Summary 
-Section 9 ini saya belajar tentang Collection, diantaranya:
-1. List digunakan untuk menyimpan banyak data. Data pada List disusun secara berurutan dan diakses menggunakan index.
-2. Set digunakan untuk menyimpan banyak data secara unik, tidak ada duplikasi, tidak berurutan, dan tidak diindeks.
-3. Map menyimpan banyak data dengan format pasangan key-value
+Section 13 ini saya belajar tentang Platform Widget, diantaranya:
+1. Scaffold adalah widget utama untuk membuat sebuah halaman pada flutter, scaffold ini memiliki beberapa parameter yang biasa kita gunakan seperti appBar untuk membuat AppBar, body untuk bagian tubuhnya, atau kita juga bisa menambahkan floating action bar, maupun mengganti warna background bodynya.
+2. Cupertino Widget adalah Widget untuk membangun Aplikasi yang dibuat oleh IOS
+3. CupertinoPageScaffold adalah widget style iOS dari Scaffold
 
 ## Task
 ### Task 01
-1. Membuat sebuah fungsi dengan spesifikasi berikut:
-- menerima 2 parameter, yaitu list data dan pengali, 
-- lakukan perulangan pada list data secara asynchronous, 
-- tiap perulangan, kalikan elemen list data dengan pengali, 
-- return list baru yang berisi hasil proses di atas.
+Membuat tampilan dengan menggunakan flutter MaterialApp
+```dart
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Telegram',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: TelegramPage(),
+    );
+  }
+}
+```
 
-![imgTask01](screenshoot/task01.png)
-
-### Task 02
-2. Membuat sebuah list dengan spesifikasi berikut & Membuat sebuah Map dengan menggunakan list tersebut!:
-- tiap element-nya berupa list juga, 
-- tiap element wajib terdapat 2 data (sub-element). 
-
-![imgTask02](screenshoot/task02.png)
+Berikut ini adalah codingan & outputnya
+![imgTask01 & imgTask02](screenshoot/task01_task02.png)
 
