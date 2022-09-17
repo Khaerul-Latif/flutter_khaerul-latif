@@ -13,19 +13,80 @@ Section 13 ini saya belajar tentang Platform Widget, diantaranya:
 ### Task 01
 Membuat tampilan dengan menggunakan flutter MaterialApp
 ```dart
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+MaterialApp(
       title: 'Telegram',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TelegramPage(),
+      home: const Telegram(),
     );
-  }
-}
 ```
 
-Berikut ini adalah codingan & outputnya
-![imgTask01 & imgTask02](screenshoot/task01_task02.png)
+Hasil emulator task 1
+- ![imgTask01](/screenshoot/task1_drawer_screen.png)
+- ![imgTask01](/screenshoot/task1_home_page.png)
+
+### Task 02
+Membuat tampilan dengan menggunakan flutter CupertinoApp
+```dart
+CupertinoApp(
+      debugShowCheckedModeBanner: false,
+      home: CupertinoPageScaffold(
+        navigationBar: CupertinoNavigationBar(
+          middle: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Edit",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 97, 179, 247), fontSize: 16),
+                ),
+                const Text(
+                  "Chats",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                CupertinoButton(
+                    child: const Icon(CupertinoIcons.square_pencil),
+                    onPressed: () {})
+              ],
+            ),
+          ),
+        ),
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(
+                height: 5,
+              ),
+              buildSearchField(),
+              const SizedBox(
+                height: 5,
+              ),
+              CupertinoSlidingSegmentedControl<int>(
+                  groupValue: groupValue,
+                  children: {
+                    0: buildSegment("All Chats"),
+                    1: buildSegment("Work"),
+                    2: buildSegment("Unread"),
+                    3: buildSegment("Personal"),
+                  },
+                  onValueChanged: (value) {
+                    setState(() {
+                      groupValue = value;
+                    });
+                  }),
+              const Expanded(child: BottomNav()),
+            ],
+          ),
+        ),
+      ),
+    );
+```
+Hasil emulator task 2
+- ![imgTask02](/screenshoot/task2_contacts_page.png)
+- ![imgTask02](/screenshoot/task2_calls_page.png)
+- ![imgTask02](/screenshoot/task2_chats_page.png)
+- ![imgTask02](/screenshoot/task2_settings_page.png)
