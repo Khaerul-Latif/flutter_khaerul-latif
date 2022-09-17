@@ -2,7 +2,7 @@ abstract class Matematika {
   hasil();
 }
 
-class highestCommonFactor extends Matematika {
+class highestCommonFactor implements Matematika {
   int x, y;
 
   highestCommonFactor(this.x, this.y);
@@ -20,7 +20,7 @@ class highestCommonFactor extends Matematika {
   }
 }
 
-class lowestCommonMultiple extends Matematika {
+class lowestCommonMultiple implements Matematika {
   int x, y;
 
   lowestCommonMultiple(this.x, this.y);

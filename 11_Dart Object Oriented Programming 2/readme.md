@@ -97,7 +97,7 @@ lowestCommonMultiple(this.x, this.y);
 diatas proses membuat variable constructor dengan nama variabel x, y dan tipe datanya integer di class lowestCommonMultiple.
 
 ```dart
-class highestCommonFactor extends Matematika {
+class highestCommonFactor implements Matematika {
   @override
   hasil() {
     var hasil;
@@ -114,7 +114,7 @@ class highestCommonFactor extends Matematika {
 diatas proses menurunkan metode hasil yang terdapat pada class Matematika ke dalam class highestCommonFactor, metode hasil berisi proses
 
 ```dart
-class lowestCommonMultiple extends Matematika {
+class lowestCommonMultiple implements Matematika {
   @override
   hasil() {
     var hasil;
