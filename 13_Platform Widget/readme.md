@@ -23,8 +23,8 @@ MaterialApp(
 ```
 
 Hasil emulator task 1
-- ![imgTask01](/screenshoot/task1_drawer_screen.png)
-- ![imgTask01](/screenshoot/task1_home_page.png)
+- ![imgTask01](screenshoot/task1_drawer_screen.png)
+- ![imgTask01](screenshoot/task1_home_page.png)
 
 ### Task 02
 Membuat tampilan dengan menggunakan flutter CupertinoApp
@@ -86,7 +86,7 @@ CupertinoApp(
     );
 ```
 Hasil emulator task 2
-- ![imgTask02](/screenshoot/task2_contacts_page.png)
-- ![imgTask02](/screenshoot/task2_calls_page.png)
-- ![imgTask02](/screenshoot/task2_chats_page.png)
-- ![imgTask02](/screenshoot/task2_settings_page.png)
+- ![imgTask02](screenshoot/task2_contacts_page.png)
+- ![imgTask02](screenshoot/task2_calls_page.png)
+- ![imgTask02](screenshoot/task2_chats_page.png)
+- ![imgTask02](screenshoot/task2_settings_page.png)
