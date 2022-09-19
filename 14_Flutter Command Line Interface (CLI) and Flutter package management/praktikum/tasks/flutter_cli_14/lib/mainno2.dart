@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Barcode'),
     );
   }
 }
@@ -36,46 +36,34 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              width: 120.0,
-              height: 80.0,
-              child: BarcodeWidget(
-                barcode: Barcode.qrCode(
-                  errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-                ),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              BarcodeWidget(
+                barcode: Barcode.code128(),
                 data: 'Alterra Academy',
-                width: 80,
-                height: 80,
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
               ),
-            ),
-            SizedBox(
-              width: 120.0,
-              height: 80.0,
-              child: BarcodeWidget(
-                barcode: Barcode.qrCode(
-                  errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-                ),
+              BarcodeWidget(
+                barcode: Barcode.code128(),
                 data: 'Flutter Asik',
-                width: 80,
-                height: 80,
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
               ),
-            ),
-            SizedBox(
-              width: 120.0,
-              height: 80.0,
-              child: BarcodeWidget(
-                barcode: Barcode.qrCode(
-                  errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-                ),
+              BarcodeWidget(
+                barcode: Barcode.code128(),
                 data: 'Khaerul Latif',
-                width: 80,
-                height: 80,
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

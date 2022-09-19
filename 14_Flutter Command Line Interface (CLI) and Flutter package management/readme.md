@@ -50,42 +50,32 @@ B. Membuat tampilan barcode
 - Flutter Asik
 - Khaerul Latif
 ```dart
-SizedBox(
-    width: 120.0,
-    height: 80.0,
-    child: BarcodeWidget(
-        barcode: Barcode.qrCode(
-          errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-    ),
-    data: 'Alterra Academy',
-    width: 80,
-    height: 80,
-    ),
-),
-SizedBox(
-    width: 120.0,
-    height: 80.0,
-    child: BarcodeWidget(
-        barcode: Barcode.qrCode(
-          errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-    ),
-    data: 'Flutter Asik',
-    width: 80,
-    height: 80,
-    ),
-),
-SizedBox(
-    width: 120.0,
-    height: 80.0,
-    child: BarcodeWidget(
-        barcode: Barcode.qrCode(
-          errorCorrectLevel: BarcodeQRCorrectionLevel.high,
-    ),
-    data: 'Khaerul Latif',
-    width: 80,
-    height: 80,
-    ),
-),
+Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              BarcodeWidget(
+                barcode: Barcode.code128(),
+                data: 'Alterra Academy',
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
+              ),
+              BarcodeWidget(
+                barcode: Barcode.code128(),
+                data: 'Flutter Asik',
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
+              ),
+              BarcodeWidget(
+                barcode: Barcode.code128(),
+                data: 'Khaerul Latif',
+                width: 600,
+                height: 200,
+                padding: EdgeInsets.all(20),
+              ),
+            ],
+          ),
 ```
 Hasil dari Task 01 dan Task 02 : 
 ## Output Task01
