@@ -1,6 +1,6 @@
 # (06) Basic Dart Programming
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50
+Nomor Peserta : 1_013FLB_50
 Nama Peserta : Khaerul Latif
 
 ## Summary 
@@ -8,7 +8,7 @@ Section 6 ini saya belajar tentang Basic Dart Programming, diantaranya:
 1. Mengetahui menggunakan dart di editor Visual Studio Code
 2. Mengetahui Operator yang terdapat di bahasa pemrograman Dart
 3. Mengetahui Tipe Data yang terdapat di bahasa pemrograman Dart
-/
+
 ## Task
 ### Task 01
 Implementasikan rumus luas lingkaran pada program Dart!
