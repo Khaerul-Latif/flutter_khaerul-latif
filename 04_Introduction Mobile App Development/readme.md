@@ -1,7 +1,7 @@
 # (04) Introduction Mobile App Development
 ## Data diri 
-Nomor Peserta : 1_013FLB_50
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50 </br>
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 4 ini saya belajar tentang Introduction Mobile App Development, diantaranya:
