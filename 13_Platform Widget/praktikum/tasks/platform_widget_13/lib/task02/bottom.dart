@@ -23,11 +23,11 @@ class _BotNavBarState extends State<BottomNav> {
           tabBar: CupertinoTabBar(
             items: const [
               BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.person_circle), label: 'Contacts'),
+                  icon: Icon(CupertinoIcons.person_circle_fill), label: 'Contacts'),
               BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.phone), label: 'Calls'),
+                  icon: Icon(CupertinoIcons.phone_fill), label: 'Calls'),
               BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.chat_bubble_2), label: 'Chats'),
+                  icon: Icon(CupertinoIcons.chat_bubble_2_fill), label: 'Chats'),
               BottomNavigationBarItem(
                   icon: Icon(CupertinoIcons.settings), label: 'Settings')
             ],

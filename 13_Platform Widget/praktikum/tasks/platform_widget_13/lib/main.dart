@@ -78,8 +78,10 @@ class _MyApp2State extends State<MyApp2> {
                   onValueChanged: (value) {
                     setState(() {
                       groupValue = value;
-                    });
-                  }),
+                    },
+                    );
+                  },
+                  ),
               const Expanded(child: BottomNav()),
             ],
           ),
@@ -90,13 +92,15 @@ class _MyApp2State extends State<MyApp2> {
 }
 
 buildSearchField() {
-  return const CupertinoSearchTextField(
+  return Center(
+    child : CupertinoSearchTextField(
     placeholder: 'Search',
     prefixIcon: Icon(CupertinoIcons.search),
+   ),
   );
 }
 
 buildSegment(String text) {
   return Text(text,
-      style: const TextStyle(fontSize: 14, color: CupertinoColors.systemGrey));
+      style: const TextStyle(fontSize: 14, color: CupertinoColors.systemBlue));
 }
