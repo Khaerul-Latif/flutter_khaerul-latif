@@ -1,7 +1,7 @@
 # (08) Advance Function - Async-Await
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 8 ini saya belajar tentang Advance Function - Async-Await, diantaranya:
