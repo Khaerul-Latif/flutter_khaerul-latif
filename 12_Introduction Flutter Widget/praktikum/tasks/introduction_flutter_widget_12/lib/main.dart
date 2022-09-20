@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State {
   var jam = '';
   void startJam() {
-    Timer.periodic(new Duration(seconds: 2), (_) {
+    Timer.periodic(new Duration(seconds: 1), (_) {
       var tgl = new DateTime.now();
       var formatedjam = new DateFormat.Hms().format(tgl);
       setState(() {
