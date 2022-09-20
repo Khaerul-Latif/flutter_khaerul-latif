@@ -4,7 +4,7 @@ Nomor Peserta : 1_013FLB_50
 Nama Peserta : Khaerul Latif
 
 ## Summary 
-Section 6 ini saya belajar tentang Basic Dart Programming, diantaranya:
+Section 06 ini saya belajar tentang Basic Dart Programming, diantaranya:
 1. Mengetahui menggunakan dart di editor Visual Studio Code
 2. Mengetahui Operator yang terdapat di bahasa pemrograman Dart
 3. Mengetahui Tipe Data yang terdapat di bahasa pemrograman Dart
