@@ -1,7 +1,7 @@
 # (06) Basic Dart Programming
 ## Data diri 
 Nomor Peserta  : 1_013FLB_50
-Nama : Khaerul Latif
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 6 ini saya belajar tentang Basic Dart Programming, diantaranya:
