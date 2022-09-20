@@ -8,6 +8,7 @@ Section 11 ini saya belajar tentang Dart Object Oriented Programming 2, diantara
 1. Abstraction, objek hanya menunjukkan operasinya secara high-level. Cukup tau method apa saja yang dibuat oleh class tersebut.
 2. Inheritance, mewarisi properti kelas induk (parent class) ke kelas anak (child class). 
 3. Polymorphism, objek class dapat memiliki bentuk atau implementasi yang berbeda-beda pada satu metode yang sama.
+
 ## Task
 ### Task 01
 **Membuat class bangunRuang, kubus dan balok. dimana class bangun ruang menurunkan class kubus dan class balok**
