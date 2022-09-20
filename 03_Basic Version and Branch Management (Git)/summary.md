@@ -1,7 +1,7 @@
 # (03) Basic Version and Branch Management (Git)
 ## Data diri 
-Nomor Peserta : 1_013FLB_50
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50 </br>
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 3 ini saya belajar tentang Basic Version and Branch Management (Git), diantaranya:
