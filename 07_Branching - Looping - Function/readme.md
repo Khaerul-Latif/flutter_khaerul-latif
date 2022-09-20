@@ -1,7 +1,7 @@
 # (07) Branching - Looping - Function
 ## Data diri 
-Nomor Peserta  : 1_013FLB_50  <br />
-Nama : Khaerul Latif
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
 
 ## Summary 
 Section 7 ini saya belajar tentang Branching - Looping - Function, diantaranya:
