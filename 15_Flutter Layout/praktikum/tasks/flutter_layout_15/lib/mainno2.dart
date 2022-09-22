@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 30),
           ),
         ),
-        body: const GridViewWidget1(),
+        body: const Task02(),
       ),
     );
   }
 }
 
-class GridViewWidget1 extends StatelessWidget {
-  const GridViewWidget1({Key? key}) : super(key: key);
+class Task02 extends StatelessWidget {
+  const Task02({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

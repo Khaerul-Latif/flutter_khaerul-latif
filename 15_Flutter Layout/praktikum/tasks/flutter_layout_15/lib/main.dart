@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListView2(),
+      home: Task01(),
     );
   }
 }
 
-class ListView2 extends StatelessWidget {
-  ListView2({Key? key}) : super(key: key);
+class Task01 extends StatelessWidget {
+  Task01({Key? key}) : super(key: key);
   final List nama = [
     "Leanne Graham",
     "Ervin Howell",
