@@ -2,7 +2,8 @@ import 'package:assets_16/pages/full_screen.dart';
 import 'package:flutter/material.dart';
 
 class ImageBottomSheets extends StatelessWidget {
-  const ImageBottomSheets({Key? key, required this.gambarBottom}) : super(key: key);
+  const ImageBottomSheets({Key? key, required this.gambarBottom})
+      : super(key: key);
 
   final String gambarBottom;
 
@@ -11,7 +12,8 @@ class ImageBottomSheets extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.all(30),
+          margin:
+              const EdgeInsets.only(left: 30, right: 30, top: 50, bottom: 50),
           height: 250,
           width: double.infinity,
           decoration: BoxDecoration(
@@ -21,26 +23,28 @@ class ImageBottomSheets extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(
+          height: 5,
+        ),
         TextButton(
-          onPressed: (){
+          onPressed: () {
             showDialog(
-              context: context, 
+              context: context,
               builder: (context) => AlertDialog(
                 content: const Text('Ingin Tampilkan Layar Penuh?'),
                 actions: [
                   TextButton(
-                    onPressed: (){
-                      Navigator.pop(context);
-                    }, 
-                    child: const Text('No')
-                  ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('No')),
                   TextButton(
-                    onPressed: (){
+                    onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(
-                          builder: (context) => FullScreen(
-                            gambarFull: gambarBottom
-                          ),
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FullScreen(gambarFull: gambarBottom),
                         ),
                       );
                     },
@@ -49,13 +53,10 @@ class ImageBottomSheets extends StatelessWidget {
                 ],
               ),
             );
-          }, 
+          },
           child: const Text(
             'Tampilkan Layar Penuh',
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 16
-            ),
+            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
           ),
         ),
       ],

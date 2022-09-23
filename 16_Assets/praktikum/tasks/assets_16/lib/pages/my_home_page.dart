@@ -9,33 +9,39 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Dialog Bottom'),
-        centerTitle: true,
+        title: const Text('Flutter Assets'),
       ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          mainAxisSpacing: 1,
-          crossAxisSpacing: 1,
+      body: Container(
+        margin: EdgeInsets.all(10),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 1,
+            crossAxisSpacing: 1,
+          ),
+          padding: EdgeInsets.only(top: 20, right: 10, left: 10),
+          itemCount: gambar.length,
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {
+                showModalBottomSheet(
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  context: context,
+                  builder: (context) => ImageBottomSheets(
+                    gambarBottom: gambar[index],
+                  ),
+                );
+              },
+              child: Image.network(
+                gambar[index],
+              ),
+            );
+          },
         ),
-        shrinkWrap: true,
-        padding: EdgeInsets.only(top: 20,right: 10, left: 10),
-        itemCount: gambar.length,
-        itemBuilder: (context, index) {
-          return InkWell(
-            onTap: () {
-              showModalBottomSheet(
-                shape: const RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(20))),
-                context: context,
-                builder: (context) =>
-                    ImageBottomSheets(gambarBottom: gambar[index]),
-              );
-            },
-            child: Image.network(gambar[index]),
-          );
-        },
       ),
     );
   }

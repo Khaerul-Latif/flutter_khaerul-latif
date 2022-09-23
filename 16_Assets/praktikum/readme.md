@@ -19,55 +19,209 @@ List<String> gambar = [
 diatas proses membuat list untuk menyimpan url gambar dari internet
 
 ```dart
-GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          mainAxisSpacing: 1,
-          crossAxisSpacing: 1,
+    Column(
+      children: [
+        Container(
+          margin:
+              const EdgeInsets.only(left: 30, right: 30, top: 50, bottom: 50),
+          height: 250,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(gambarBottom),
+              alignment: Alignment.center,
+            ),
+          ),
         ),
-        padding: EdgeInsets.all(20),
-        itemCount: gambar.length,
-        itemBuilder: (context, index) {
-          return InkWell(
-            onTap: () {
-              showModalBottomSheet(
-                shape: const RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.vertical(top: Radius.circular(20))),
-                context: context,
-                builder: (context) =>
-                    ImageBottomSheets(gambarBottom: gambar[index]),
-              );
-            },
-            child: Image.network(gambar[index]),
-          );
-        },
-      ),
+        SizedBox(
+          height: 5,
+        ),
+        TextButton(
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                content: const Text('Ingin Tampilkan Layar Penuh?'),
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('No')),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FullScreen(gambarFull: gambarBottom),
+                        ),
+                      );
+                    },
+                    child: const Text('Yes'),
+                  ),
+                ],
+              ),
+            );
+          },
+          child: const Text(
+            'Tampilkan Layar Penuh',
+            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+          ),
+        ),
+      ],
+    );
 ```
 diatas proses menampilkan gridview dari list yang sudah dibuat
 
 **Hasil Output Task01**
 ![imgTask01](/16_Assets/screenshoot/task01.png)
 
-### Task 02
-**Menambahkan fungsi saat ditekan akan membuat halaman baru, halaman tersebut bisa di perbesar**
+### Task 02 A
 ```dart
- TextButton(
-                    onPressed: (){
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {
+                showModalBottomSheet(
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  context: context,
+                  builder: (context) => ImageBottomSheets(
+                    gambarBottom: gambar[index],
+                  ),
+                );
+              },
+              child: Image.network(
+                gambar[index],
+              ),
+            );
+          },
+```
+diatas menampilkan jika saat salah satu gambar pada homepage di klik
+
+**Hasil Output Task02 A**
+![imgTask02](/16_Assets/screenshoot/task02(1).png)
+
+### Task 02 B
+```dart
+    return Column(
+      children: [
+        Container(
+          margin:
+              const EdgeInsets.only(left: 30, right: 30, top: 50, bottom: 50),
+          height: 250,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(gambarBottom),
+              alignment: Alignment.center,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        TextButton(
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                content: const Text('Ingin Tampilkan Layar Penuh?'),
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('No')),
+                  TextButton(
+                    onPressed: () {
                       Navigator.push(
-                        context, MaterialPageRoute(
-                          builder: (context) => FullScreen(
-                            gambarFull: gambarBottom
-                          ),
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              FullScreen(gambarFull: gambarBottom),
                         ),
                       );
                     },
                     child: const Text('Yes'),
                   ),
+                ],
+              ),
+            );
+          },
+          child: const Text(
+            'Tampilkan Layar Penuh',
+            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+          ),
+        ),
+      ],
+    );
 ```
-proses diatas adalah ketika user mengklik 'Yes' maka gambar akan full, yang dimana proses gambar full tersebut terletak di Class FullScreen
+diatas adalah proses untuk memampilkan gambar full dengan mengklik tulisan 'Tampilkan Layat Penuh'
 
-**Hasil Output Task02**
-![imgTask02](/16_Assets/screenshoot/task02.png)
-![imgTask02](/16_Assets/screenshoot/task02(1).png)
+**Hasil Output Task02 B**
 ![imgTask02](/16_Assets/screenshoot/task02(2).png)
+
+## Task 02 C
+```dart
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Gambar Full'),
+      ),
+      body: Center(
+        child: Container(
+          height: double.infinity,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(gambarFull), fit: BoxFit.fitWidth),
+          ),
+        ),
+      ),
+    );
+```
+
+diatas untuk menampilkan gamabr full jika gambat sebelumnya di klik Yes'
+**Hasil Output Task02 B**
+![imgTask02](/16_Assets/screenshoot/task02(3).png
+### Latihan 01
+**Membuat background image dan menampilkan image dari internet, serta menampilkan nama di tebalkan tuliskannya**
+```dart
+Widget HomePage() {
+  return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+          "https://wallpapercave.com/wp/wp9392330.jpg",
+        ),
+        fit: BoxFit.cover,
+      ),
+    ),
+    child: Center(
+      child: Stack(
+        children: [
+          Center(
+            child: Container(
+              child: Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXA4znlFUMBw1Ziu6JVUwWEWxukwGAtuKcw&usqp=CAU",
+                height: 500,
+                width: 500,
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 250),
+            child: Center(
+              child: Text("Khaerul Latif",
+                  style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold)),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+```
+Diatas proses menampilkan background image dan menampilkan image dari internet, serta menampilkan nama di tebalkan
