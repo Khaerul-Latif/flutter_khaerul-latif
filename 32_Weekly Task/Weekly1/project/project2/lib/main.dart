@@ -229,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                           context: context,
                           builder: (context) => AlertDialog(
                             title: Text('Terima Kasih Sudah Mengisi'),
-                            content: Text('\nNama : ${firstName.text}'+'${lastName.text}\nEmail : ${email.text}\nMessage : ${message.text}'),
+                            content: Text('\nNama : ${firstName.text}'+' '+'${lastName.text}\nEmail : ${email.text}\nMessage : ${message.text}'),
                           ),
                         );
                       },

@@ -24,7 +24,7 @@ Section 4 ini saya belajar tentang Introduction Mobile App Development, diantara
 2. GarageBand
 3. Adobe Photoshop Sketch
 
-### Task 03 bagian 2    
+### Task 02 bagian 2    
 3 aplikasi yang dapat berjalan di Android tetapi tidak di iOS
 1. Aplikasi Launcher Android
 2. ES File Explorer File Manager

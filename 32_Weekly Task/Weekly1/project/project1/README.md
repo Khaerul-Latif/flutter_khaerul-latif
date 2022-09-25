@@ -1,16 +1,37 @@
-# project1
+# 32_Weekly Task
+## Data diri 
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
 
-A new Flutter project.
+## Project 01
+### Project 01 Task 01 Bagian A
+**Membuat folder project berisi kode - kode**
+![Img Project 1 A](/32_Weekly%20Task/Weekly1/screenshot/project1_task1(a).png)
 
-## Getting Started
+### Project 01 Task 01 Bagian B 
+**Membuat folder screenshot berisi hasil kode yang telah dibuat**
+![Img Project 1 B](/32_Weekly%20Task/Weekly1/screenshot/project1_task1(b).png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project 01 Task 02 Bagian A
+**Membuah Appbar pada Aplikasi dengan text atau logo**
+```dart
+    AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Image.asset(
+              'assets/images/logo.jpg',
+              fit: BoxFit.contain,
+              height: 35,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text("Store.Tif", style: TextStyle(color: Colors.black)),
+          ],
+        ),
+        backgroundColor: Colors.white,
+      ),
+```
+Hasil dari project 1
+![img hasil project1](/32_Weekly%20Task/Weekly1/screenshot/hasil_project1_task1_bagianA.png)
