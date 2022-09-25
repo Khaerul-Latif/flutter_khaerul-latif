@@ -1,4 +1,4 @@
-# 32_Weekly Task
+# 32_Weekly Task(Weekly1)
 ## Data diri 
 Nomor Peserta : 1_013FLB_50  <br />
 Nama Peserta : Khaerul Latif
@@ -67,14 +67,108 @@ Nama Peserta : Khaerul Latif
               ],
             ),
 ```
+
+Hasil dari Project 2 task 1 bagian A
+![img hasil project2 task 1 bagian A](/32_Weekly%20Task/Weekly1/screenshot/hasil_project2_task1_bagianA.png)
+
+### Project 02 Task 01 Bagian A
+```dart
+            Padding(
+              padding: const EdgeInsets.only(right: 10, left: 10),
+              child: Column(
+                children: [
+                  TextFormField(
+                    controller: firstName,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      labelText: 'First name*',
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.text,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'can not be empty';
+                      }
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    controller: lastName,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      labelText: 'Last name',
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.text,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'can not be empty';
+                      }
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    controller: email,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      labelText: 'Email*',
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'can not be empty';
+                      }
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    controller: message,
+                    autofocus: true,
+                    decoration: InputDecoration(
+                      labelText: 'What can we help you with?',
+                      border: OutlineInputBorder(),
+                    ),
+                    maxLines: null,
+                    keyboardType: TextInputType.multiline,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'can not be empty';
+                      }
+                    },
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: Text('Terima Kasih Sudah Mengisi'),
+                            content: Text('\nNama : ${firstName.text}'+' '+'${lastName.text}\nEmail : ${email.text}\nMessage : ${message.text}'),
+                          ),
+                        );
+                      },
+                      child: Text("Submit"),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+```
 Hasil dari Project 2 task 2 bagian A
 ![img hasil project2 task 2 bagian A](/32_Weekly%20Task/Weekly1/screenshot/hasil_project2_task1_bagianA.png)
 
-Kode dari Project 2 task 2 bagian A
-![img hasil project2 task 2 bagian A](/32_Weekly%20Task/Weekly1/screenshot/project2_task1(a1).png)
-![img hasil project2 task 2 bagian A](/32_Weekly%20Task/Weekly1/screenshot/project2_task1(a2).png)
-
-### Project 02 Task 01 Bagian B 
+### Project 02 Task 02 Bagian B 
 **Memiliki button submit**
 ```dart
                   Container(
@@ -117,4 +211,6 @@ Hasil dari Project 2 task 2 bagian B
 ```
 
 Hasil dari Project 2 task 2 bagian C
-![img hasil project2 task 2 bagian C](/32_Weekly%20Task/Weekly1/screenshot/hasil_project2_task1_bagianC.png)
+![img hasil project2 task 2 bagian C](/32_Weekly%20Task/Weekly1/screenshot/hasil_project2_task2_bagianC.png)
+![img hasil project2 task 2 bagian C](/32_Weekly%20Task/Weekly1/screenshot/project2_task2(c).png)
+![img hasil project2 task 2 bagian C](/32_Weekly%20Task/Weekly1/screenshot/project2_task2(c2).png)

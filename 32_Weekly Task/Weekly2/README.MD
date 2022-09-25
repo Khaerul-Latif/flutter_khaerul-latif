@@ -1,114 +1,70 @@
+# 32_Weekly Task (Weekly2)
+## Data diri 
+Nomor Peserta : 1_013FLB_50  <br />
+Nama Peserta : Khaerul Latif
+
+## Project 01
+### Project 01 Task 01 Bagian A
+**Membuat side bar yang berisi 3 navigation button yaitu contact us,about us, dan login**
+```dart
+endDrawer: DrawerPage(),
+```
+diatas membuat atribut endDrawer agar lokasi drawer berada di kanan, serta nilai dari atribut tersebut adalah widget dengan nama "DrawerPage"
+
+```dart
 import 'package:flutter/material.dart';
-import 'package:project1/screen/drawer_screen.dart';
-import 'package:project1/page/welcome_page.dart';
-import 'package:project1/page/form_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-void main() {
-  runApp(const MyApp());
+class DrawerScreen extends StatefulWidget {
+  const DrawerScreen({super.key});
+
+  @override
+  State<DrawerScreen> createState() => _DrawerScreenState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  final firstName = TextEditingController();
-  final lastName = TextEditingController();
-  final email = TextEditingController();
-  final message = TextEditingController();
-
-  @override
-  void dispose() {
-    firstName.dispose();
-    lastName.dispose();
-    email.dispose();
-    message.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+    return Drawer(
+      backgroundColor: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.only(top :80),
+        child: ListView(
           children: [
-            Image.asset(
-              'assets/images/logo.jpg',
-              fit: BoxFit.contain,
-              height: 35,
+            ElevatedButton.icon(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),
+              onPressed: () {},
+              icon: FaIcon(FontAwesomeIcons.addressBook), 
+              label: Text("Contact us"), 
             ),
-            SizedBox(
-              width: 10,
+            ElevatedButton.icon(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),
+              onPressed: () {},
+              icon: FaIcon(FontAwesomeIcons.building), 
+              label: Text("About us"), 
             ),
-            Text(
-              "Store.Tif",
-              style: TextStyle(
-                color: Colors.black,
-              ),
+            ElevatedButton.icon(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.black)),
+             onPressed: () {},
+              icon: FaIcon(FontAwesomeIcons.rightToBracket), 
+              label: Text("Login"), 
             ),
           ],
         ),
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(
-          color: Colors.black, //change your color here
-        ),
       ),
-      endDrawer: DrawerScreen(),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            WelcomePage(),
-            Padding(
-              padding: const EdgeInsets.only(top: 20, right: 15, left: 15),
-              child: Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: Text(
-                      'Contact us',
-                      style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Need to get in touch with us? Either fill out the form with your inquiry or find the denartment email youd lke to contact below',
-                    style: TextStyle(
-                      fontSize: 10,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            FormPage(
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                message: message),
+    );
+  }
+}
+```
+
+diatas menampilkan 3 navigation dan 3 icon contact us, about us, dan login pada drawer
+
+Hasil dari Project 1
+![Img Project 1 Task 1](/32_Weekly%20Task/Weekly2/screenshot/project1_task1.png)
+
+### Project 01 Task 02 Bagian A 
+**Membuat title bertulis about us**
+```dart
             Container(
               alignment: Alignment.topCenter,
               child: Text(
@@ -143,18 +99,15 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Container(
-              alignment: Alignment.topCenter,
-              child: Text(
-                'Produk yang di jual',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
+```
+
+Hasil dari Project 1 Task 2 Bagian A
+![Img Project 1 Task 2 Bagian A](/32_Weekly%20Task/Weekly2/screenshot/project1_task2(a).png)
+
+## Project 01 Task 02 Bagian A
+**Membuat list produk dalam bentuk card**
+```dart
+Container(
               margin: EdgeInsets.only(top: 20, left: 50, right: 50, bottom: 20),
               padding: EdgeInsets.only(left: 50, right: 50),
               child: Card(
@@ -262,9 +215,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+```
+Hasil dari Project 1 Task 2 Bagian B
+
+![Img Project 1 Task 2 Bagian B](/32_Weekly%20Task/Weekly2/screenshot/project1_task2(b1).png)
+
+![Img Project 1 Task 2 Bagian B](/32_Weekly%20Task/Weekly2/screenshot/project1_task2(b2).png)

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class DrawerPage extends StatefulWidget {
-  const DrawerPage({super.key});
+class DrawerScreen extends StatefulWidget {
+  const DrawerScreen({super.key});
 
   @override
-  State<DrawerPage> createState() => _DrawerPageState();
+  State<DrawerScreen> createState() => _DrawerScreenState();
 }
 
-class _DrawerPageState extends State<DrawerPage> {
+class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
