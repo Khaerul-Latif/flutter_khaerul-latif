@@ -36,4 +36,4 @@ Nama Peserta : Khaerul Latif
       ),
 ```
 Hasil dari project 1
-![img hasil project1](/32_Weekly%20Task/Weekly1/screenshot/hasil_project1_task1_bagianA.png)
+![Img Project 1 B](/32_Weekly%20Task/Weekly1/screenshot/hasil_project1_task1_bagianA.png)
