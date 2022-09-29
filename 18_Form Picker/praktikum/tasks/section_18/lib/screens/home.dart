@@ -24,7 +24,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightGreen,
         title: const Text("Create Post"),
       ),
       drawer: const Drawer(),
@@ -68,13 +67,35 @@ class _HomeState extends State<Home> {
                     },
                     child: const Text('Submit'),
                   ),
-                )
+                ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  void _pickFile() async {
+    final result = await FilePicker.platform.pickFiles(type: FileType.image);
+    if (result == null) return;
+
+    final file = result.files.first;
+    setState(() {
+      _images = _getFile(file);
+    });
+  }
+
+  _getFile(PlatformFile file) {
+    return file.path;
+  }
+
+  _updateNameFile() {
+    if (_images == null) {
+      return '';
+    } else {
+      return _images.toString();
+    }
   }
 
   Widget buildFilePicker(BuildContext context) {
@@ -89,7 +110,7 @@ class _HomeState extends State<Home> {
           width: double.infinity,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.grey[600],
+              backgroundColor: Colors.grey[600],
             ),
             onPressed: () {
               _pickFile();
@@ -107,7 +128,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget buildDatePicker(BuildContext context) {
-    final format = DateFormat("dd-MM-yyyy");
+    final format = DateFormat("dd/MM/yyyy");
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -145,6 +166,35 @@ class _HomeState extends State<Home> {
     );
   }
 
+  _getColor(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text("Pick Color"),
+          content: BlockPicker(
+            pickerColor: _currentColor,
+            onColorChanged: (color) {
+              setState(
+                () {
+                  _currentColor = color;
+                },
+              );
+            },
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text("Save"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Widget buildColorPicker(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,8 +202,10 @@ class _HomeState extends State<Home> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text("Color Theme",
-                style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text(
+              "Color Theme",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
             TextButton(
               onPressed: () {
                 _getColor(context);
@@ -202,57 +254,6 @@ class _HomeState extends State<Home> {
           },
         ),
       ],
-    );
-  }
-
-  void _pickFile() async {
-    final result = await FilePicker.platform.pickFiles(type: FileType.image);
-    if (result == null) return;
-
-    final file = result.files.first;
-    setState(() {
-      _images = _getFile(file);
-    });
-  }
-
-  _getFile(PlatformFile file) {
-    return file.path;
-  }
-
-  _updateNameFile() {
-    if (_images == null) {
-      return '';
-    } else {
-      return _images.toString();
-    }
-  }
-
-  _getColor(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: const Text("Pick Color"),
-          content: BlockPicker(
-            pickerColor: _currentColor,
-            onColorChanged: (color) {
-              setState(
-                () {
-                  _currentColor = color;
-                },
-              );
-            },
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: const Text("Save"),
-            )
-          ],
-        );
-      },
     );
   }
 }
