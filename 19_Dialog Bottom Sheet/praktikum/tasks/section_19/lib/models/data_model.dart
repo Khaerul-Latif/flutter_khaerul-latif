@@ -1,0 +1,20 @@
+List<String> gambar = [
+    'https://www.kibrispdr.org/data/786/pics-of-spongbob-12.jpg',
+    'https://logos-download.com/wp-content/uploads/2016/09/Patrick_Star_picture_logo-520x700.png',
+    'https://static.tvtropes.org/pmwiki/pub/images/squidward_tentacles_91.png',
+    'https://i.pinimg.com/236x/e1/46/2e/e1462ebce4e7f0c22a2df04275452146.jpg',
+    'https://i.pinimg.com/originals/07/4b/d7/074bd7dfc19abf84f5cd6cb70619c703.jpg',
+    'https://fbface.files.wordpress.com/2013/01/b5d4a-pearl.jpg',
+    'https://static.wikia.nocookie.net/spongebob/images/c/cd/Gary_the_Snail.png/revision/latest/scale-to-width-down/250?cb=20121008231800&path-prefix=id',
+    'https://www.pngitem.com/pimgs/m/77-774947_spongebob-fanon-wiki-mrs-puff-spongebob-hd-png.png',
+    'https://static.wikia.nocookie.net/spongebob/images/b/ba/Flying_Dutchman.png/revision/latest?cb=20190109144650&path-prefix=id',
+    'https://static.wikia.nocookie.net/spongebob/images/c/ca/Mermaid_Man_stock_art.png/revision/latest?cb=20220807020103',
+    'https://static.wikia.nocookie.net/spongebob/images/1/18/Karen-blue-form-stock-art.png/revision/latest?cb=20200317150606',
+    'https://static.wikia.nocookie.net/spongebob/images/b/b1/Harold_Squarepants_model.png/revision/latest?cb=20220807051128',
+    'https://yt3.ggpht.com/M47aFa_OiqIQDj6mkt4N76AsqqABS0tJPXmQ_r2VoC0XfDNLTqwOI5midLRKqER0zXlUMb4hdQ=s900-c-k-c0x00ffffff-no-rj',
+    'https://static.wikia.nocookie.net/spongebob/images/d/d5/Barnacle_Boy_stock_art.png/revision/latest/scale-to-width-down/1200?cb=20220807020111',
+    'https://static.wikia.nocookie.net/spongebob/images/d/d3/Grandma_SquarePants_model_pose.png/revision/latest/top-crop/width/360/height/450?cb=20220807020833',
+    'https://static.wikia.nocookie.net/spongebob/images/b/ba/Bubble_Bass_model.png/revision/latest?cb=20220807054053',
+    'https://static.wikia.nocookie.net/spongebob/images/7/71/Princess_Mindy.webp/revision/latest?cb=20220810005336',
+    'https://static.wikia.nocookie.net/nickelodeon/images/7/7d/Neptune_with_trident_render.png/revision/latest?cb=20190127020014&path-prefix=id'
+];
