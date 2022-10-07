@@ -78,6 +78,7 @@ diatas menampilkan halaman yang sesuai dengan spesifikasi yang diminta, didalam 
 
 
 Hasil output dan run Task 01
+
 ![Gif Task 01](/23_Flutter%20Animation/screenshots/task01.gif)
 
 ### Task 02
@@ -147,4 +148,5 @@ class AppRoute {
 diatas membuat class untuk route dan mengimport dan mengunakan class animasi dan beberapa parameter yang telah di buat sebelumnya
 
 Hasil output dan run Task 02
+
 ![Gif Task 02](/23_Flutter%20Animation/screenshots/task02.gif)
