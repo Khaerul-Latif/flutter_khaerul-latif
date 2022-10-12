@@ -6,7 +6,7 @@ Nama Peserta : Khaerul Latif
 ## Task
 ### Task 01 dan Task 02
 **Buatlah halaman Register dan halaman Home, dengan ketentuan sebagai berikut:**
-- Pada halaman Register, buat tombol Register dan 4 kolom untuk nama, email, nomor telepon, dan password.
+1. Pada halaman Register, buat tombol Register dan 4 kolom untuk nama, email, nomor telepon, dan password.
 ```dart
         child: Form(
           autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -100,7 +100,7 @@ Nama Peserta : Khaerul Latif
           ),
         ),
 ```
-- Saat menekan tombol Register, simpan data email (String), nama (String) dan isLogin (boolean/bool) ke dalam shared preference dan navigasi ke halaman Home.
+2. Saat menekan tombol Register, simpan data email (String), nama (String) dan isLogin (boolean/bool) ke dalam shared preference dan navigasi ke halaman Home.
 
 ```dart
   late SharedPreferences loginData;
@@ -143,7 +143,7 @@ Nama Peserta : Khaerul Latif
                 child: const Text('Register'),
               ),
 ```
-- Pada halaman Home, buat teks untuk menampilkan nama dan email & buat tombol loq out.
+3. Pada halaman Home, buat teks untuk menampilkan nama dan email & buat tombol loq out.
 ```dart
       body: Center(
         child: Column(
@@ -178,7 +178,7 @@ Nama Peserta : Khaerul Latif
         ),
       ),
 ```
-- Saat menekan tombol rog out, hapus semua isi di shared preference & navigasi ke halaman Register.
+4. Saat menekan tombol rog out, hapus semua isi di shared preference & navigasi ke halaman Register.
 ```dart
             loginData.remove('name');
                 loginData.remove('email');
@@ -189,7 +189,7 @@ Nama Peserta : Khaerul Latif
                     ),
                     (route) => false);
 ```
-- Gunakan state management provider & bloc untuk menampilkan nama dan email di halaman Home.
+5. Gunakan state management provider & bloc untuk menampilkan nama dan email di halaman Home.
 
 **saya masih bingung menggunakan state provider & bloc pada task ini pak**
 
