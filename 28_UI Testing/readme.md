@@ -1,34 +1,42 @@
-# (27) Finite State Machine & Unit Testing
-## Data diri 
-Nomor Peserta : 1_013FLB_50  <br />
-Nama Peserta : Khaerul Latif
+# 27 UI Testing
 
-## Summary 
-Section 27 ini saya belajar tentang Finite State Machine & Unit Testing, diantaranya:
-1. Finite State Machine, merupakan mesin yang memiliki jumlah state dan tiap statenya menunjukkan apa yang terjadi sebelumnya.
-Contoh:
-terdapat 3 state yang menunjukkan kejadian dalam suatu proses.
+## Resume
 
-- IDDLE saat tidak terjadi proses
-- RUNNING saat proses sedang berjalan
-- ERROR saat proses gagal diselesaikan
+Dalam materi ini, mempelajari:
 
-Contoh sukses:
+1. Pengertian UI Testing
+2. Melakukan UI Testing
 
-- IDDLE berubah menjadi RUNNING saat proses berjalans
-- RUNNING kembali menjadi IDDLE saat proses selesai
+### Pengertian UI Testing
 
-Contoh gagal:
+merupakan pengujian yang dilakukan pada tampilan suatu aplikasi untuk memastikan aplikasi dapat menerima interaksi dan memberi respon kepada pengguna. UI testing di flutter disebut dkuga widget testing sehingga pengujian dilakukan pada widgets dengan menuliskan script yang dapat dijalankan secara otomatis.
+adapun keuntungan UI testing sebagai berikut:
 
-- IDDLE berubah menjadi RUNNING saat proses berjalan
-- RUNNING menjadi ERROR saat terjadi kegagalan
-- ERROR kembali menjadi IDDLE
+- memastikan seluruh widget memberi tampilan yang sesuai
+- memastikan seluruh interaksi dapat diterima dengan baik
+- menjadi ketentuan yang harus diikuti saat diperlakukan perubahan pada widget
 
-2. Unit Test, merupakan salah satu jenis pengujian pada perangkat lunak, pengujian tersebut dilakukan pada unit dalam perangkat lunak. Unit yang dimaksud umummnya adalah fungsi atau method. tujuan unit test adalah untuk memastikkan fungsi dapat mengolah berbagai jenis input. memastikan hasil dari suatu fungsi atau method sudah sesuai
+### Melakukan UI Testing
 
-3. Mocking, merupakan proses yang terikat dengan sistem eksternal dapat mempengaruhi berjalannya pengujian, Pengaruh tersebut dapat menggangu proses pengujian. dilakukan mocking untuk menghindari masalah-masalh tersebut.
-Cara kerja mocking:
+pada saat melakukan UI testing ada beberapa hal yang harus dilakukan:
 
-- suatu objek dibuat bentuk tiruannya
-- Bentuk tiruan tersebut memiliki input dan output yang sama dengan yang asli
-- Bentuk tiruan menghilangkan ketergantungan pada sistem eksternal
+- Instalasi package testing
+- Penulisan Script Testing
+- Script Testing
+- Menjalankan Testing
+
+## Task
+
+### Melakuakn test seluruh halam yang sudah dibuat
+
+[task1.go](./Praktikum/test/Task1/home_screen_test.dart)
+
+output:
+![task1](./Screenshots/task1.jpeg)
+
+### Melakukan test pada halaman yang belum dibuat
+
+[task2.go](./Praktikum/test/Task2/home_screen2_test.dart)
+
+output:
+![task2](./Screenshots/task2.jpeg)
