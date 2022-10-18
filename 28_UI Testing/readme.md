@@ -4,7 +4,7 @@ Nomor Peserta : 1_013FLB_50  <br />
 Nama Peserta : Khaerul Latif
 
 ## Summary 
-Section 27 ini saya belajar tentang UI Testing 
+Section 28 ini saya belajar tentang UI Testing 
 1. Pengertian UI Testing, merupakan pengujian yang dilakukan pada tampilan suatu aplikasi untuk memastikan aplikasi dapat menerima interaksi dan memberi respon kepada pengguna. UI testing di flutter disebut dkuga widget testing sehingga pengujian dilakukan pada widgets dengan menuliskan script yang dapat dijalankan secara otomatis.
 adapun keuntungan UI testing sebagai berikut:
 
