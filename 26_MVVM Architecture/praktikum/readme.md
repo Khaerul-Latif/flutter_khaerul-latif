@@ -1,28 +1,29 @@
-# (09) Collection
+# (26) MVVM Architecture
 ## Data diri 
 Nomor Peserta : 1_013FLB_50  <br />
 Nama Peserta : Khaerul Latif
 
-## Summary 
-Section 9 ini saya belajar tentang Collection, diantaranya:
-1. List digunakan untuk menyimpan banyak data. Data pada List disusun secara berurutan dan diakses menggunakan index.
-2. Set digunakan untuk menyimpan banyak data secara unik, tidak ada duplikasi, tidak berurutan, dan tidak diindeks.
-3. Map menyimpan banyak data dengan format pasangan key-value
-
 ## Task
 ### Task 01
-1. Membuat sebuah fungsi dengan spesifikasi berikut:
-- menerima 2 parameter, yaitu list data dan pengali, 
-- lakukan perulangan pada list data secara asynchronous, 
-- tiap perulangan, kalikan elemen list data dengan pengali, 
-- return list baru yang berisi hasil proses di atas.
+**Ubah seluruh halaman yang telah dibuat menjadi bentuk MVVM!**
 
-![imgTask01](screenshoot/task01.png)
+![imgTask01](26_MVVM%20Architecture/screenshots/MVVM Flutter.png)
 
 ### Task 02
-2. Membuat sebuah list dengan spesifikasi berikut & Membuat sebuah Map dengan menggunakan list tersebut!:
-- tiap element-nya berupa list juga, 
-- tiap element wajib terdapat 2 data (sub-element). 
+**Tambahkan sebuah halaman baru yang menggunakan ViewModel dari halaman lain!** 
+```dart
+class ContactViewModel extends ChangeNotifier {
+  final _listContact = [];
 
-![imgTask02](screenshoot/task02.png)
+  List<ContactModel> get listContact {
+    _listContact.sort((a, b) => a.name.compareTo(b.name));
+    return List.unmodifiable(_listContact);
+  }
 
+  void addContact(ContactModel contact) {
+    _listContact.add(contact);
+    notifyListeners();
+  }
+}
+```
+diatas menambahkan class ContactViewModel yang berisi methode untuk menambahkan item
