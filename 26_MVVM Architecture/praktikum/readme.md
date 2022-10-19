@@ -7,7 +7,7 @@ Nama Peserta : Khaerul Latif
 ### Task 01
 **Ubah seluruh halaman yang telah dibuat menjadi bentuk MVVM!**
 
-![imgTask01](26_MVVM%20Architecture/screenshots/MVVM Flutter.png)
+![imgTask01](/26_MVVM%20Architecture/screenshots/MVVM%20Flutter.png)
 
 ### Task 02
 **Tambahkan sebuah halaman baru yang menggunakan ViewModel dari halaman lain!** 
