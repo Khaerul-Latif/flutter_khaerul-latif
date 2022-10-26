@@ -236,8 +236,8 @@ void main() {
 diatas mengetest judul, body dan seluru element pada form screen
 
 Hasil dari Task 01
+<video src="/28_UI Testing/screenshots/task_01.mp4" alt="video task01" controls="controls" style="max-width: 730px;"></video>
 
-![video task01](/28_UI%20Testing/screenshots/task_01.mp4)
 
 ### Task 02
 2. Lakukan test pada halaman yang belum dibuat!.
