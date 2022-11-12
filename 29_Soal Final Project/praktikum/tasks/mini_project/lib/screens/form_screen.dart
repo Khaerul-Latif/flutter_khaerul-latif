@@ -52,10 +52,11 @@ class _FormScreenState extends State<FormScreen> {
 
   selectDate() async {
     final datePicker = await showDatePicker(
-        context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime.parse('2022-10-01'),
-        lastDate: DateTime.parse('2024-12-31'));
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime.now(),
+      lastDate: DateTime.parse('2024-12-31'),
+    );
     if (datePicker != null && datePicker != _selectedDate) {
       setState(() {
         _selectedDate = datePicker;
@@ -63,6 +64,14 @@ class _FormScreenState extends State<FormScreen> {
       });
       print(datePicker);
     }
+  }
+
+  buildDate() {
+    final dateNow = DateTime.now();
+    setState(() {
+       _selectedDate = dateNow;
+      dateController.text = dateNow.formatSaving();
+    });
   }
 
   selectTime() async {
@@ -76,20 +85,31 @@ class _FormScreenState extends State<FormScreen> {
     }
   }
 
+  buildTime() {
+    final timeNow = TimeOfDay.now();
+    setState(() {
+       _selectedTime = timeNow;
+      timeController.text = timeNow.format(context).formatSaving();
+    });
+  }
+
   save() async {
     setState(() {
       isLoading = true;
     });
     final user = await SaveUserCache.getUser();
+    final timeNull = timeController.text.isEmpty;
+    final dateNull = dateController.text.isEmpty;
     final todo = widget.todo != null
         ? widget.todo!.copyWith(
             title: titleController.text,
             date: dateController.text,
             time: timeController.text,
-            description: descController.text)
+            description: descController.text,
+          )
         : Todo(
-            date: dateController.text,
-            time: timeController.text,
+            date: dateNull ? buildDate() : dateController.text,
+            time: timeNull ? buildTime() : timeController.text,
             title: titleController.text,
             description: descController.text,
             userId: user!,
@@ -139,6 +159,46 @@ class _FormScreenState extends State<FormScreen> {
           children: [
             const SizedBox(
               height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  buildLabel(name: 'Title'),
+                  Row(
+                    children: [
+                      Flexible(
+                        fit: FlexFit.tight,
+                        child: buildInput(
+                            controller: titleController, hintText: 'Title'),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  buildLabel(name: 'Description'),
+                  Row(
+                    children: [
+                      Flexible(
+                        fit: FlexFit.tight,
+                        child: buildInput(
+                          controller: descController,
+                          height: 100,
+                          inputType: TextInputType.multiline,
+                          hintText: 'Description',
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -196,53 +256,13 @@ class _FormScreenState extends State<FormScreen> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  buildLabel(name: 'Title'),
-                  Row(
-                    children: [
-                      Flexible(
-                        fit: FlexFit.tight,
-                        child: buildInput(
-                            controller: titleController, hintText: 'Title'),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  buildLabel(name: 'Description'),
-                  Row(
-                    children: [
-                      Flexible(
-                        fit: FlexFit.tight,
-                        child: buildInput(
-                          controller: descController,
-                          height: 100,
-                          inputType: TextInputType.multiline,
-                          hintText: 'Description',
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
             const SizedBox(
               height: 30,
             ),
             Center(
               child: isLoading
                   ? CircularProgressIndicator(
-                      color: primaryColor,
+                      color: greenLight,
                     )
                   : ElevatedButton(
                       style: ElevatedButton.styleFrom(

@@ -3,6 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:mini_project/providers/auth_provider.dart';
 import 'package:mini_project/providers/user_provider.dart';
 import 'package:mini_project/screens/home_screen.dart';
+import 'package:mini_project/screens/list_todo.dart';
 import 'package:mini_project/screens/login_screen.dart';
 import 'package:mini_project/screens/splash_screen.dart';
 import 'package:mini_project/shared/theme.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home:LoginScreen(),
+        home:SplashScreen(),
       ),
     );
   }

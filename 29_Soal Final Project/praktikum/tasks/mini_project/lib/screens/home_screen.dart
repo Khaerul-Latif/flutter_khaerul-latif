@@ -5,6 +5,7 @@ import 'package:mini_project/extension/string_extension.dart';
 import 'package:mini_project/models/todo_model.dart';
 import 'package:mini_project/providers/user_provider.dart';
 import 'package:mini_project/screens/list_todo.dart';
+import 'package:mini_project/screens/splash_screen.dart';
 import 'package:mini_project/services/database_todo.dart';
 import 'package:mini_project/screens/form_screen.dart';
 import 'package:mini_project/screens/login_screen.dart';
@@ -26,6 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   bool dbIsOpen = false;
 
+  double turns = 0.0;
+
   @override
   void initState() {
     initDatabase();
@@ -42,231 +45,239 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 30,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Hi, ${widget.user.caseCamel()}',
-                          style: primaryBlackTextStyle.copyWith(
-                            fontSize: 24,
-                            fontWeight: semiBold,
-                          ),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hi, ${widget.user.caseCamel()}',
+                        style: primaryBlackTextStyle.copyWith(
+                          fontSize: 24,
+                          fontWeight: semiBold,
                         ),
-                        Text(
-                          'have a great day',
-                          style: redLightTextStyle.copyWith(
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5))),
-                              title: Text(
-                                'Sign Out',
-                                style: primaryBlackTextStyle,
-                              ),
-                              content: Text(
-                                'Are you sure want to sign out the application?',
-                                style: primaryBlackTextStyle,
-                              ),
-                              actions: [
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text(
-                                    'Cancel',
-                                    style: redLightTextStyle,
-                                  ),
-                                ),
-                                ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                      backgroundColor: redLight),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      TransitionScreen(
-                                        widget: LoginScreen(),
-                                        offset: Offset(-1, 0),
-                                      ),
-                                    );
-                                  },
-                                  child: Text(
-                                    'Sign Out',
-                                    style: primaryWhiteTextStyle,
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        );
-                      },
-                      child: Icon(
-                        Icons.power_settings_new_rounded,
-                        color: redLight,
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Ongoing Task',
-                      style: primaryBlackTextStyle.copyWith(
-                        fontSize: 18,
-                        fontWeight: semiBold,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          TransitionScreen(
-                            widget: ListTodoScreen(
-                              user: widget.user,
-                            ),
-                            offset: Offset(1, 0),
-                          ),
-                        );
-                      },
-                      child: Text(
-                        'see all',
-                        style: TextStyle(
-                          color: redLight,
+                      Text(
+                        'have a great day',
+                        style: redLightTextStyle.copyWith(
                           fontSize: 14,
-                          fontWeight: regular,
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Flexible(
-                child: !dbIsOpen
-                    ? Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircularProgressIndicator(
-                            color: greenLight,
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Text('Loading database...please wait')
-                        ],
-                      )
-                    : FutureBuilder(
-                        future: databaseTodo.fetchAll(),
-                        builder: (context, snapshot) {
-                          if (snapshot.connectionState ==
-                              ConnectionState.waiting) {
-                            return Center(
-                              child: CircularProgressIndicator(
-                                color: greenLight,
-                              ),
-                            );
-                          }
-                          if (snapshot.hasError) {
-                            return Center(
-                              child: Text(
-                                'Something went wrong.',
-                                style: redLightTextStyle.copyWith(
-                                  fontWeight: light,
+                    ],
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            title: Text(
+                              'Sign Out',
+                              style: primaryBlackTextStyle,
+                            ),
+                            content: Text(
+                              'Are you sure want to sign out the application?',
+                              style: primaryBlackTextStyle,
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  'Cancel',
+                                  style: redLightTextStyle,
                                 ),
                               ),
-                            );
-                          } else if (snapshot.connectionState ==
-                                  ConnectionState.done &&
-                              (!snapshot.hasData ||
-                                  (snapshot.data as List).length == 0)) {
-                            return Center(
-                              child: Text('Data Unavailable'),
-                            );
-                          } else if (snapshot.connectionState ==
-                                  ConnectionState.done &&
-                              snapshot.hasData &&
-                              (snapshot.data as List).length > 0) {
-                            var todos = snapshot.data as List<Todo>;
-                            todos = todos
-                                .where((todo) =>
-                                    todo.date == DateTime.now().formatSaving())
-                                .toList();
-                            todos.sort(
-                              (a, b) => (Todo.toDateTime(a).compareTo(
-                                Todo.toDateTime(b),
-                              )),
-                            );
-                            todos.sort(
-                              (a, b) => a.time!
-                                  .getPeriod()
-                                  .split('')[0]
-                                  .toLowerCase()
-                                  .compareTo(
-                                    b.time!
-                                        .getPeriod()
-                                        .split('')[0]
-                                        .toLowerCase(),
-                                  ),
-                            );
-                            return ListView.builder(
-                              physics: BouncingScrollPhysics(),
-                              itemCount: todos.length,
-                              itemBuilder: (context, index) {
-                                return buildTaskCard(todos[index]);
-                              },
-                            );
-                          }
-                          return const SizedBox.shrink();
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    backgroundColor: redLight),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    TransitionScreen(
+                                      widget: SplashScreen(),
+                                      offset: const Offset(-1, 0),
+                                    ),
+                                  );
+                                  // Navigator.pop(context);
+                                },
+                                child: Text(
+                                  'Sign Out',
+                                  style: primaryWhiteTextStyle,
+                                ),
+                              ),
+                            ],
+                          );
                         },
+                      );
+                    },
+                    child: Icon(
+                      Icons.power_settings_new_rounded,
+                      color: redLight,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Ongoing Task',
+                    style: primaryBlackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        TransitionScreen(
+                          widget: ListTodoScreen(
+                            user: widget.user,
+                          ),
+                          offset: const Offset(1, 0),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'see all',
+                      style: TextStyle(
+                        color: redLight,
+                        fontSize: 14,
+                        fontWeight: regular,
                       ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Flexible(
+              child: !dbIsOpen
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircularProgressIndicator(
+                          color: greenLight,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        const Text('Loading database...please wait')
+                      ],
+                    )
+                  : FutureBuilder(
+                      future: databaseTodo.fetchAll(),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          return Center(
+                            child: CircularProgressIndicator(
+                              color: greenLight,
+                            ),
+                          );
+                        }
+                        if (snapshot.hasError) {
+                          return Center(
+                            child: Text(
+                              'Something went wrong.',
+                              style: redLightTextStyle.copyWith(
+                                fontWeight: light,
+                              ),
+                            ),
+                          );
+                        } else if (snapshot.connectionState ==
+                                ConnectionState.done &&
+                            (!snapshot.hasData ||
+                                (snapshot.data as List).length == 0)) {
+                          return const Center(
+                            child: Text('Data Unavailable'),
+                          );
+                        } else if (snapshot.connectionState ==
+                                ConnectionState.done &&
+                            snapshot.hasData &&
+                            (snapshot.data as List).length > 0) {
+                          var todos = snapshot.data as List<Todo>;
+                          todos = todos
+                              .where((todo) =>
+                                  todo.date == DateTime.now().formatSaving())
+                              .toList();
+                          todos.sort(
+                            (a, b) => (Todo.toDateTime(a).compareTo(
+                              Todo.toDateTime(b),
+                            )),
+                          );
+                          todos.sort(
+                            (a, b) => a.time!
+                                .getPeriod()
+                                .split('')[0]
+                                .toLowerCase()
+                                .compareTo(
+                                  b.time!
+                                      .getPeriod()
+                                      .split('')[0]
+                                      .toLowerCase(),
+                                ),
+                          );
+                          return ListView.builder(
+                            physics: const BouncingScrollPhysics(),
+                            itemCount: todos.length,
+                            itemBuilder: (context, index) {
+                              return buildTaskCard(todos[index]);
+                            },
+                          );
+                        }
+                        return const SizedBox.shrink();
+                      },
+                    ),
+            ),
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: primaryColor,
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => FormScreen(),
-              ),
-            );
-          },
-          child: Icon(Icons.add_rounded),
-        ));
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: primaryColor,
+        shape: const CircleBorder(),
+        onPressed: () {
+          setState(() => turns += 0.5);
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => FormScreen(),
+            ),
+          );
+        },
+        child: AnimatedRotation(
+          turns: turns,
+          duration: const Duration(milliseconds: 750),
+          child: const Icon(Icons.add_rounded),
+        ),
+      ),
+    );
   }
 
   Widget circleIconButton(
@@ -282,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Icon(
           icon,
           size: 18,
-          color: Color(0xffF2F0F0),
+          color: const Color(0xffF2F0F0),
         ),
       ),
     );
@@ -291,17 +302,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget buildTaskCard(Todo todo) {
     return Container(
       height: 120,
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      padding: EdgeInsets.all(15),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Color(0xffFBFBFB),
+        color: const Color(0xffFBFBFB),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
             spreadRadius: -1,
             blurRadius: 8,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
       ),
@@ -348,7 +359,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              shape: RoundedRectangleBorder(
+                              shape: const RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(5))),
                               title: Text(
@@ -378,11 +389,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   onPressed: () async {
                                     final count =
                                         await databaseTodo.delete(todo.id!);
-                                    Navigator.pop(context);
+                                    // Navigator.pop(context);
                                     if (count > 0) {
                                       Navigator.pop(context);
                                     }
-                                    setState(() {});
+                                    // setState(() {});
                                   },
                                   child: Text(
                                     'Remove',
@@ -410,7 +421,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 fit: FlexFit.tight,
                 child: Text(
                   todo.description!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.w200,
                   ),
@@ -435,7 +446,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     size: 18,
                     color: redLight,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
                   Text(
